@@ -62,12 +62,12 @@ Now you are ready to configure your patches. Use the table below to select the p
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 4000 | 01660001 | 01006601 | 4 | 96MB | 24MB | 1536MB | LVDS1 HDMI1 DP2 |
-| Intel HD Graphics 4000 | 01660002 | 02006601 | 1 | 64MB | 24MB | 1536MB | LVDS1 |
-| Intel HD Graphics 4000\* | 01660003 | 03006601 | 4 | 64MB | 16MB | 1536MB | LVDS1 DP3 |
-| Intel HD Graphics 4000 | 01660004 | 04006601 | 1 | 32MB | 16MB | 1536MB | LVDS1 |
-| Intel HD Graphics 4000 | 01660008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 4000 | 01660009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 4000 | 66010001 | 01006601 | 4 | 96MB | 24MB | 1536MB | LVDS1 HDMI1 DP2 |
+| Intel HD Graphics 4000 | 66010002 | 02006601 | 1 | 64MB | 24MB | 1536MB | LVDS1 |
+| Intel HD Graphics 4000\* | 66010003 | 03006601 | 4 | 64MB | 16MB | 1536MB | LVDS1 DP3 |
+| Intel HD Graphics 4000 | 66010004 | 04006601 | 1 | 32MB | 16MB | 1536MB | LVDS1 |
+| Intel HD Graphics 4000 | 66010008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 4000 | 66010009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 
 #### Usual values
 
@@ -79,83 +79,83 @@ Now you are ready to configure your patches. Use the table below to select the p
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 4400 | 0a16000c | 0c00160a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 5000\*\* | 0a260005 | 0500260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 5000 | 0a260006 | 0600260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 5100 | 0a2e0008 | 08002e0a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 5200 | 0d260007 | 0700260d | 4 | 64MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
-| Intel Iris Pro Graphics 5200 | 0d260009 | 0900260d | 1 | 64MB | 34MB | 1536MB | LVDS1 |
-| Intel Iris Pro Graphics 5200 | 0d26000e | 0e00260d | 4 | 96MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
-| Intel Iris Pro Graphics 5200 | 0d26000f | 0f00260d | 1 | 96MB | 34MB | 1536MB | LVDS1 |
+| Intel HD Graphics 4400 | 160a000c | 0c00160a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 5000\*\* | 260a0005 | 0500260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 5000 | 260a0006 | 0600260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 5100 | 2e0a0008 | 08002e0a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 5200 | 260d0007 | 0700260d | 4 | 64MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
+| Intel Iris Pro Graphics 5200 | 260d0009 | 0900260d | 1 | 64MB | 34MB | 1536MB | LVDS1 |
+| Intel Iris Pro Graphics 5200 | 260d000e | 0e00260d | 4 | 96MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
+| Intel Iris Pro Graphics 5200 | 260d000f | 0f00260d | 1 | 96MB | 34MB | 1536MB | LVDS1 |
 
 ### Intel Broadwell
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Unlisted iGPU | 16060002 | 02000616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Unlisted iGPU | 160e0001 | 01000e16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 5600 | 16120003 | 03001216 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP2 HDMI1 |
+| Unlisted iGPU | 06160002 | 02000616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Unlisted iGPU | 0e160001 | 01000e16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 5600 | 12160003 | 03001216 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP2 HDMI1 |
 | Intel HD Graphics 5500 | 16160002 | 02001616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 5300 | 161e0001 | 01001e16 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 6200 | 16220002 | 02002216 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 6000 | 16260002 | 02002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 6000 | 16260005 | 05002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 6000\* | 16260006 | 06002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 6100 | 162b0002 | 02002b16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 5300 | 1e160001 | 01001e16 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 6200 | 22160002 | 02002216 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 6000 | 26160002 | 02002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 6000 | 26160005 | 05002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 6000\* | 26160006 | 06002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 6100 | 2b160002 | 02002b16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
 
 ### Intel Skylake
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 530 | 19120000 | 00001219 | 3 | 34MB | 21MB | 1536MB | DUMMY1 DP2 |
-| Intel HD Graphics 520\* | 19160000 | 00001619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 520 | 19160002 | 02001619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 530 | 191b0000 | 00001b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 530 | 191b0006 | 06001b19 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
-| Intel HD Graphics 515 | 191e0000 | 00001e19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 515 | 191e0003 | 03001e19 | 3 | 40MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260000 | 00002619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260002 | 02002619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260004 | 04002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260007 | 07002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 550 | 19270000 | 00002719 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 550 | 19270004 | 04002719 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 580 | 193b0000 | 00003b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 580 | 193b0005 | 05003b19 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP3 |
+| Intel HD Graphics 530 | 12190000 | 00001219 | 3 | 34MB | 21MB | 1536MB | DUMMY1 DP2 |
+| Intel HD Graphics 520\* | 16190000 | 00001619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 520 | 16190002 | 02001619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 530 | 1b190000 | 00001b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 530 | 1b190006 | 06001b19 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
+| Intel HD Graphics 515 | 1e190000 | 00001e19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 515 | 1e190003 | 03001e19 | 3 | 40MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 540 | 26190000 | 00002619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 540 | 26190002 | 02002619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 540 | 26190004 | 04002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 540 | 26190007 | 07002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 550 | 27190000 | 00002719 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 550 | 27190004 | 04002719 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 580 | 3b190000 | 00003b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 580 | 3b190005 | 05003b19 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP3 |
 
 ### Intel Kaby Lake, KBL-R, & Amber Lake
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 620 | 59160000 | 00001659 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 620 | 59160009 | 09001659 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
-| Unlisted iGPU | 59180002 | 02001859 | 0 | 0MB | 0MB | 1536MB | Connector: |
-| Intel HD Graphics 630\* | 591b0000 | 00001b59 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 630 | 591b0006 | 06001b59 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
-| Unlisted iGPU | 591c0005 | 05001c59 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 615 | 591e0000 | 00001e59 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 615 | 591e0001 | 01001e59 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 640 | 59260002 | 02002659 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 650 | 59270004 | 04002759 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 650 | 59270009 | 09002759 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 617\*\* | 87C00000 | 0000C087 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 617 | 87C00005 | 0500C087 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 620 | 16590000 | 00001659 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 620 | 16590009 | 09001659 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
+| Unlisted iGPU | 18590002 | 02001859 | 0 | 0MB | 0MB | 1536MB | Connector: |
+| Intel HD Graphics 630\* | 1b590000 | 00001b59 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 630 | 1b590006 | 06001b59 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
+| Unlisted iGPU | 1c590005 | 05001c59 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 615 | 1e590000 | 00001e59 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 615 | 1e590001 | 01001e59 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 640 | 26590002 | 02002659 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 650 | 27590004 | 04002759 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 650 | 27590009 | 09002759 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 617\*\* | C0870000 | 0000C087 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 617 | C0870005 | 0500C087 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 
 ### Intel Coffee Lake
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel UHD Graphics 630 | 3E000000 | 0000003E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3E920000 | 0000923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3E920009 | 0900923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DUMMY2 |
-| Intel UHD Graphics 630 | 3E9B0000 | 00009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3E9B0006 | 06009B3E | 1 | 38MB | 0MB | 1536MB | LVDS1 DUMMY2 |
-| Intel UHD Graphics 630 | 3E9B0009 | 09009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 655 | 3EA50000 | 0000A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 655 | 3EA50004 | 0400A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3EA50005 | 0500A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 655\* | 3EA50009 | 0900A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Unlisted iGPU | 3EA60005 | 0500A63E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 003E0000 | 0000003E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 923E0000 | 0000923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 923E0009 | 0900923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DUMMY2 |
+| Intel UHD Graphics 630 | 9B3E0000 | 00009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 9B3E0006 | 06009B3E | 1 | 38MB | 0MB | 1536MB | LVDS1 DUMMY2 |
+| Intel UHD Graphics 630 | 9B3E0009 | 09009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 655 | A53E0000 | 0000A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 655 | A53E0004 | 0400A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | A53E0005 | 0500A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 655\* | A53E0009 | 0900A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Unlisted iGPU | A63E0005 | 0500A63E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 
 ## CLOVER Resolution
 
