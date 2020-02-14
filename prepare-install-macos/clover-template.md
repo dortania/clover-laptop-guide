@@ -69,6 +69,12 @@ Below you'll find bundled fixes that you may need to enable to correct the probl
 | Enable TRIM for SSD | Enabled | Enables native trim support for SATA SSDs |
 | Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar | Enabled | Helper to allow VoodooI2C to start before Apple native I2C drivers. \(Two patches\) |
 
+## Embedded Controller Patching
+
+If you are installing macOS Catalina, it's probable that you will need to patch your embedded controller for macOS.  Rather than explaining in detail here, you should click out to the laptop section of the EC Fix guide.
+
+[EC Fix Guide](https://khronokernel.github.io/EC-fix-guide/laptop-ec.html)
+
 ## The Config.plist in a Nutshell
 
 Before continuing, you need a bit of knowledge about the config.plist which is a structured text document \(XML\) that provides CLOVER with the instructions that it needs to customize your laptop to boot and use macOS. It is a complex, and sometimes daunting dictionary of key value pairs. There are a variety of tools available to help configure it, here are a few to help get you started.

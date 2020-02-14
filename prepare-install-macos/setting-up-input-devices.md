@@ -4,11 +4,9 @@ Input devices on laptops come in a few varietys, each with its own set of quirks
 
 ## Keyboards
 
-Most laptop keyboards are PS/2 devices. Yep, it's 2019 and PS/2 is still a thing. Crazy, huh? There's some good news here, you only need to install two kexts to get it working and then you can put the USB keyboard that you're probably using right now back in the closet where it belongs. The kexts that you need are VoodooPS2Controller, and VoodooInput.  You can find them over on Github.
+Most laptop keyboards are PS/2 devices. Yep, it's 2019 and PS/2 is still a thing. Crazy, huh? There's some good news here, you only need to install a single kext to get it working and then you can put the USB keyboard that you're probably using right now back in the closet where it belongs. That kext is VoodooPS2Controller, and you can find it over on Github.
 
-[VoodooPS2 Project Page @ Github](https://github.com/acidanthera/VoodooPS2)
-
-[VoodooInput Project Page @ Github](https://github.com/acidanthera/VoodooInput)
+[VoodooPS2 Project Page](https://github.com/acidanthera/VoodooPS2)
 
 Download the latest release and add it to CLOVER placing the VoodooPS2Controller kext in your C/k/O folder. The path should match the tree below.
 
@@ -17,7 +15,6 @@ EFI
 └── CLOVER
     └── kexts
         └── Other
-            ├── VoodooInput.kext
             └── VoodooPS2Controller.kext
 ```
 
