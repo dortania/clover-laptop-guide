@@ -67,7 +67,7 @@ Below you'll find bundled fixes that you may need to enable to correct the probl
 | Patch | Default | Function |
 | :--- | :--- | :--- |
 | Enable TRIM for SSD | Enabled | Enables native trim support for SATA SSDs |
-| Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar | Enabled | Helper to allow VoodooI2C to start before Apple native I2C drivers. \(Two patches\) |
+| Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar | Disabled | Helper to allow VoodooI2C to start before Apple native I2C drivers. \(Two patches\) Should no longer be necessary to use these. |
 
 ## Embedded Controller Patching
 
