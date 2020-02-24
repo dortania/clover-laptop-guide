@@ -14,6 +14,10 @@ Before installing VirtualSMC you will also need to download and install VirtualS
 
 [Download Lilu @ Github](https://github.com/acidanthera/Lilu)
 
+You may also need VirtualSMC.efi, especially if you plan on [enabling FileVault](../extras/enabling-filevault.md).  This EFI has been deprecated but still works fine with CLOVER.  It can be downloaded from the link below.
+
+[Download VirtualSMC.efi @ Github](https://github.com/acidanthera/VirtualSMC/tree/master/EfiDriver)
+
 ### Installing VirtualSMC
 
 Once you have the packages downloaded, mount your EFI partition and delete SMCHelper from CLOVER/drivers/UEFI or wherever the EFI drivers are stored for your installation. Copy the VirtualSMC EFI into the directory to replace it.
