@@ -55,7 +55,7 @@ I get it, you want your Hackintosh to be able to access the internet and connect
   <tbody></tbody>
 </table>| BCM943602BAED | MHF4 | [Dell DW1830](https://web.archive.org/web/20191020204443/https://wikidevi.com/wiki/Dell_Wireless_1830_%28DW1830%29) \(A/E key\) |
 | :--- | :--- | :--- |
-| BCM94360NG | MHF4 | Fenvi BCM94360NG |
+| BCM94360NG | MHF4 | Fenvi BCM94360NG \(A/E key\) |
 
 ### Apple Native WIFI Cards
 
