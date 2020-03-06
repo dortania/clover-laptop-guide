@@ -48,13 +48,14 @@ I get it, you want your Hackintosh to be able to access the internet and connect
           key)</p>
         <p><a href="https://web.archive.org/web/20191003030111/https://wikidevi.com/wiki/Broadcom_BCM94352Z">Lenovo 04X6020</a> (E
           key)</p>
+        <p>Fenvi AC1200 (A/E key)</p>
       </th>
     </tr>
   </thead>
   <tbody></tbody>
 </table>| BCM943602BAED | MHF4 | [Dell DW1830](https://web.archive.org/web/20191020204443/https://wikidevi.com/wiki/Dell_Wireless_1830_%28DW1830%29) \(A/E key\) |
 | :--- | :--- | :--- |
-
+| BCM94360NG | MHF4 | Fenvi BCM94360NG |
 
 ### Apple Native WIFI Cards
 
