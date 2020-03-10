@@ -22,7 +22,7 @@ To find the link key for the device, match the devices MAC address in the output
 }
 ```
 
-Once you have the link key, convert the endianness \(big endian to little endian\) so you can use it in Windows. Using the link key in the block above, the conversion would look like this:
+Once you have the link key, convert the endianness \(little endian to big endian\) so you can use it in Windows. Using the link key in the block above, the conversion would look like this:
 
 ```text
 01122334 45566778 89900112 23344556
