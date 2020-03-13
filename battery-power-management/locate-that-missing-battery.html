@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Know Your Hardware · GitBook</title>
+        <title>Locate that Missing Battery · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="bios-configuration.html" />
+    <link rel="next" href="correcting-sleep-problems.html" />
     
     
-    <link rel="prev" href="../a-guide-to-build-guides.html" />
+    <link rel="prev" href="../post-installation/configuring-your-audio-device.html" />
     
 
     </head>
@@ -131,9 +131,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="know-your-hardware.html">
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
             
-                <a href="know-your-hardware.html">
+                <a href="../before-you-start/know-your-hardware.html">
             
                     
                     Know Your Hardware
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="bios-configuration.html">
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
             
-                <a href="bios-configuration.html">
+                <a href="../before-you-start/bios-configuration.html">
             
                     
                     BIOS Configuration
@@ -445,9 +445,9 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+        <li class="chapter active" data-level="6.1" data-path="locate-that-missing-battery.html">
             
-                <a href="../battery-power-management/locate-that-missing-battery.html">
+                <a href="locate-that-missing-battery.html">
             
                     
                     Locate that Missing Battery
@@ -458,9 +458,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+        <li class="chapter " data-level="6.2" data-path="correcting-sleep-problems.html">
             
-                <a href="../battery-power-management/correcting-sleep-problems.html">
+                <a href="correcting-sleep-problems.html">
             
                     
                     Correcting Sleep Problems
@@ -471,9 +471,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="../battery-power-management/optimizing-battery-life.html">
+        <li class="chapter " data-level="6.3" data-path="optimizing-battery-life.html">
             
-                <a href="../battery-power-management/optimizing-battery-life.html">
+                <a href="optimizing-battery-life.html">
             
                     
                     Optimizing Battery Life
@@ -573,7 +573,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Know Your Hardware</a>
+        <a href=".." >Locate that Missing Battery</a>
     </h1>
 </div>
 
@@ -588,46 +588,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="know-your-hardware">Know Your Hardware</h1>
-<h2 id="know-your-hardware">Know your Hardware!</h2>
-<p>Knowing your hardware is the single most imporant component of your Hackintosh journey. Your laptop has a lot of components ranging from the CPU and memory to WIFI and USB ports. Learning everything you can down to the physical IDs and locations of components on the bus can make the difference between a successful and relatively painless Hackintosh experience, and failure.</p>
-<p>Remember, the only person responsible for the success or failure of your build is you! With that in mind, it&apos;s important to note that you are also responsible should anything go wrong or if your computer breaks by following any of the advice or guidance provided by this guide.</p>
-<h3 id="vendor-manuals">Vendor Manuals</h3>
-<p>Your laptop vendor publishes information that documents the general makeup of your system. You want to start here. Download the users manual, and read it from cover to cover. If your vendor also publishes a service manual, that will be very helpful to read in advance. Examples of where this documentation will come in handy would be locating BIOS settings, or identifying part numbers of hardware for deeper inspection.</p>
-<h3 id="native-os-tools">Native OS Tools</h3>
-<p>Your system probably ships with Windows, use the built-in tools such as <strong>System Information</strong> and <strong>Device Manager</strong> to collect general information about your hardware.</p>
-<h3 id="linux-tools">Linux Tools</h3>
-<p>Keep a bootable live USB of your favorite Linux distribution close by as it will include a variety of tools for deep inspection of devices. Tools such as:</p>
-<ul>
-<li><code>lspci</code> (Display detailed information about your PCI/PCIe devices)</li>
-<li><code>lsusb</code> (Same for USB devices)</li>
-<li><code>dmidecode</code> (Detailed dump of DMI configuration data including memory slots, firmware, and more)</li>
-</ul>
-<p>A Linux USB will also be helpful in the event you need to collect information about your devices, for example it would be used to collect detailed information about your audio codec for troubleshooting purposes.</p>
-<h2 id="incompatible-hardware">Incompatible Hardware</h2>
-<p>There are a lot of devices that are difficult or impossible to make work with macOS. These devices simply aren&apos;t supported, or may be partially supported but you could have serious issues.</p>
-<h3 id="amd-cpus">AMD CPUs</h3>
-<p>AMD CPUs and their associated iGPUs are unsupported in macOS. While it&apos;s possible to work around these issues with CPU patches and adding a dGPU on a desktop, you cannot add a dGPU to a laptop. AMD systems with dGPUs often use software mux switches which are also incompatible with macOS.</p>
-<h3 id="intel-cpus">Intel CPUs</h3>
-<p>macOS Mojave doesn&apos;t support any Intel processors earlier than generation 3 core CPUs due to a lack of Metal support in the integrated GPU. It is possible to get these processors working with various patches and hacks but you are better off staying with earlier versions of macOS instead.</p>
-<p>You can also add to this list:</p>
-<ul>
-<li>Pentiums</li>
-<li>Celerons</li>
-<li>Atoms</li>
-</ul>
-<h3 id="wifi-cards">WIFI cards</h3>
-<p>Do you have an Intel, Atheros, Realtek, or Broadcom device that isn&apos;t a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A _**_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.</p>
-<p>If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.</p>
-<p>Before purchasing make sure your Laptop doesn&apos;t have a whitelist that prevents the card from working. Yes, that&apos;s actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years.</p>
-<h3 id="gpus">GPUs</h3>
-<p>Does your laptop have an AMD or Nvidia GPU? You&apos;ll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple&apos;s use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. But that is still experimental and very unstable for some devices.</p>
-<h3 id="built-in-sdcard-readers">Built in SDCard Readers</h3>
-<p>If you have an SDCard reader that&apos;s connected through an internal USB hub, it&apos;s probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you&apos;re probably going to want to fake the ID so it appears as a native reader to the operating system. See! We&apos;re not even to the next page yet, and it&apos;s already important to know your hardware!</p>
-<h3 id="fingerprint-readers">Fingerprint Readers</h3>
-<p>Apple only supports their implementation of fingerprint readers through Touch ID. You may as well turn it off in your BIOS and save a little bit of power. While you&apos;re in there, turn off that USB SDCard reader as well!</p>
-<h3 id="smartcard-readers">SmartCard Readers</h3>
-<p>While some can be supported somehow, they&apos;re mostly not, and thankfully they&apos;re USB connected and can be disabled by either the BIOS/UEFI firmware Setup screen (if possible) or by remapping your USB ports and disabling it. It can potentially save some juice.</p>
+                                <h1 id="locate-that-missing-battery">Locate that Missing Battery</h1>
+<p>First thing I have to ask is this. Is it actually missing? Often just installing VirtualSMC is all that it takes for your battery status to appear. If it&apos;s there, there&apos;s nothing to see here, and it&apos;s safe to move onto the next section!</p>
+<p>Oh, you&apos;re still here? Well...unfortunately that means this is going to be one of our more painful endeavors as it requires DSDT patches. Fortunately, you&apos;ve already studied applying hotpatches, so there&apos;s no need to cover it again. Let&apos;s jump right into the basics to get you started.</p>
+<h2 id="dsdt-battery-status-patching">DSDT Battery Status Patching</h2>
+<p>First of all, you&apos;re going to need to dust off maciASL. Remember that? You used it to compile the SSDT patches for your touchpad. This is going to be a little different. Here&apos;s the 101.</p>
+<h3 id="dumping-your-dsdt">Dumping your DSDT</h3>
+<p>The first step in getting ready to patch your DSDT is to get a copy of it from your firmware. You can do this by rebooting your computer and pressing F4 at the CLOVER menu, before launching macOS. That instructs CLOVER to drop a copy of it in your EFI partition under CLOVER/ACPI/origin.</p>
+<h3 id="patching-the-dsdt">Patching the DSDT</h3>
+<p>This is a little more advanced, so after getting you started you&apos;re going to have to study some documentation and really understand what it is that you&apos;re doing as the DSDT is quite fragile. Open maciASL, then open your DSDT file. You should be presented with quite an array of data about your system. If you get an error right away, that means you&apos;ll want to go into preferences and change your iASL and then close and re-open the DSDT. To do that, open Preferences of maciASL, click iASL and select Legacy. If Legacy is already selected change it to Stable. You&apos;ll also want to click the Update iASL button before closing.</p>
+<p>Alright, now that you&apos;re in maciASL and you have your DSDT open comes the hard part. Finding patches that work for your system. In maciASL you&apos;ll notice that at the top center of the main window are two options; Compile, and Patch.</p>
+<p>Click Patch and in the left pane of the window that opens you should find a whole bunch of patch repositories already configured for you. Find Rehabman in the tree. Under this section you will find a large selection of patches for various laptops. After making a backup of your DSDT, try applying the patches for systems that are most similar to yours. You might get lucky and have no more work to do.</p>
+<p>If those don&apos;t work, you&apos;re going to have to get personal with Rehabman&apos;s battery patching guide and your DSDT.</p>
+<p><a href="https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/" target="_blank">[Guide] How to patch DSDT for working battery status</a></p>
+<p>This one could take a while, but don&apos;t worry..the next section will be here waiting for your click!</p>
 
                                 
                                 </section>
@@ -655,12 +629,12 @@
 
             
                 
-                <a href="../a-guide-to-build-guides.html" class="navigation navigation-prev " aria-label="Previous page: A Guide to Build Guides">
+                <a href="../post-installation/configuring-your-audio-device.html" class="navigation navigation-prev " aria-label="Previous page: Configuring your Audio Device">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="bios-configuration.html" class="navigation navigation-next " aria-label="Next page: BIOS Configuration">
+                <a href="correcting-sleep-problems.html" class="navigation navigation-next " aria-label="Next page: Correcting Sleep Problems">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -671,7 +645,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Know Your Hardware","level":"2.1","depth":1,"next":{"title":"BIOS Configuration","level":"2.2","depth":1,"path":"before-you-start/bios-configuration.md","ref":"before-you-start/bios-configuration.md","articles":[]},"previous":{"title":"A Guide to Build Guides","level":"1.2","depth":1,"path":"a-guide-to-build-guides.md","ref":"a-guide-to-build-guides.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"before-you-start/know-your-hardware.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Locate that Missing Battery","level":"6.1","depth":1,"next":{"title":"Correcting Sleep Problems","level":"6.2","depth":1,"path":"battery-power-management/correcting-sleep-problems.md","ref":"battery-power-management/correcting-sleep-problems.md","articles":[]},"previous":{"title":"Configuring your Audio Device","level":"5.5","depth":1,"path":"post-installation/configuring-your-audio-device.md","ref":"post-installation/configuring-your-audio-device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"battery-power-management/locate-that-missing-battery.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

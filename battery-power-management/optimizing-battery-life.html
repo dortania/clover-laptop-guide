@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Know Your Hardware · GitBook</title>
+        <title>Optimizing Battery Life · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="bios-configuration.html" />
+    <link rel="next" href="../extras/enabling-filevault.html" />
     
     
-    <link rel="prev" href="../a-guide-to-build-guides.html" />
+    <link rel="prev" href="correcting-sleep-problems.html" />
     
 
     </head>
@@ -131,9 +131,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="know-your-hardware.html">
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
             
-                <a href="know-your-hardware.html">
+                <a href="../before-you-start/know-your-hardware.html">
             
                     
                     Know Your Hardware
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="bios-configuration.html">
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
             
-                <a href="bios-configuration.html">
+                <a href="../before-you-start/bios-configuration.html">
             
                     
                     BIOS Configuration
@@ -445,9 +445,9 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+        <li class="chapter " data-level="6.1" data-path="locate-that-missing-battery.html">
             
-                <a href="../battery-power-management/locate-that-missing-battery.html">
+                <a href="locate-that-missing-battery.html">
             
                     
                     Locate that Missing Battery
@@ -458,9 +458,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+        <li class="chapter " data-level="6.2" data-path="correcting-sleep-problems.html">
             
-                <a href="../battery-power-management/correcting-sleep-problems.html">
+                <a href="correcting-sleep-problems.html">
             
                     
                     Correcting Sleep Problems
@@ -471,9 +471,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="../battery-power-management/optimizing-battery-life.html">
+        <li class="chapter active" data-level="6.3" data-path="optimizing-battery-life.html">
             
-                <a href="../battery-power-management/optimizing-battery-life.html">
+                <a href="optimizing-battery-life.html">
             
                     
                     Optimizing Battery Life
@@ -573,7 +573,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Know Your Hardware</a>
+        <a href=".." >Optimizing Battery Life</a>
     </h1>
 </div>
 
@@ -588,46 +588,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="know-your-hardware">Know Your Hardware</h1>
-<h2 id="know-your-hardware">Know your Hardware!</h2>
-<p>Knowing your hardware is the single most imporant component of your Hackintosh journey. Your laptop has a lot of components ranging from the CPU and memory to WIFI and USB ports. Learning everything you can down to the physical IDs and locations of components on the bus can make the difference between a successful and relatively painless Hackintosh experience, and failure.</p>
-<p>Remember, the only person responsible for the success or failure of your build is you! With that in mind, it&apos;s important to note that you are also responsible should anything go wrong or if your computer breaks by following any of the advice or guidance provided by this guide.</p>
-<h3 id="vendor-manuals">Vendor Manuals</h3>
-<p>Your laptop vendor publishes information that documents the general makeup of your system. You want to start here. Download the users manual, and read it from cover to cover. If your vendor also publishes a service manual, that will be very helpful to read in advance. Examples of where this documentation will come in handy would be locating BIOS settings, or identifying part numbers of hardware for deeper inspection.</p>
-<h3 id="native-os-tools">Native OS Tools</h3>
-<p>Your system probably ships with Windows, use the built-in tools such as <strong>System Information</strong> and <strong>Device Manager</strong> to collect general information about your hardware.</p>
-<h3 id="linux-tools">Linux Tools</h3>
-<p>Keep a bootable live USB of your favorite Linux distribution close by as it will include a variety of tools for deep inspection of devices. Tools such as:</p>
-<ul>
-<li><code>lspci</code> (Display detailed information about your PCI/PCIe devices)</li>
-<li><code>lsusb</code> (Same for USB devices)</li>
-<li><code>dmidecode</code> (Detailed dump of DMI configuration data including memory slots, firmware, and more)</li>
-</ul>
-<p>A Linux USB will also be helpful in the event you need to collect information about your devices, for example it would be used to collect detailed information about your audio codec for troubleshooting purposes.</p>
-<h2 id="incompatible-hardware">Incompatible Hardware</h2>
-<p>There are a lot of devices that are difficult or impossible to make work with macOS. These devices simply aren&apos;t supported, or may be partially supported but you could have serious issues.</p>
-<h3 id="amd-cpus">AMD CPUs</h3>
-<p>AMD CPUs and their associated iGPUs are unsupported in macOS. While it&apos;s possible to work around these issues with CPU patches and adding a dGPU on a desktop, you cannot add a dGPU to a laptop. AMD systems with dGPUs often use software mux switches which are also incompatible with macOS.</p>
-<h3 id="intel-cpus">Intel CPUs</h3>
-<p>macOS Mojave doesn&apos;t support any Intel processors earlier than generation 3 core CPUs due to a lack of Metal support in the integrated GPU. It is possible to get these processors working with various patches and hacks but you are better off staying with earlier versions of macOS instead.</p>
-<p>You can also add to this list:</p>
-<ul>
-<li>Pentiums</li>
-<li>Celerons</li>
-<li>Atoms</li>
-</ul>
-<h3 id="wifi-cards">WIFI cards</h3>
-<p>Do you have an Intel, Atheros, Realtek, or Broadcom device that isn&apos;t a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A _**_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.</p>
-<p>If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.</p>
-<p>Before purchasing make sure your Laptop doesn&apos;t have a whitelist that prevents the card from working. Yes, that&apos;s actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years.</p>
-<h3 id="gpus">GPUs</h3>
-<p>Does your laptop have an AMD or Nvidia GPU? You&apos;ll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple&apos;s use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. But that is still experimental and very unstable for some devices.</p>
-<h3 id="built-in-sdcard-readers">Built in SDCard Readers</h3>
-<p>If you have an SDCard reader that&apos;s connected through an internal USB hub, it&apos;s probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you&apos;re probably going to want to fake the ID so it appears as a native reader to the operating system. See! We&apos;re not even to the next page yet, and it&apos;s already important to know your hardware!</p>
-<h3 id="fingerprint-readers">Fingerprint Readers</h3>
-<p>Apple only supports their implementation of fingerprint readers through Touch ID. You may as well turn it off in your BIOS and save a little bit of power. While you&apos;re in there, turn off that USB SDCard reader as well!</p>
-<h3 id="smartcard-readers">SmartCard Readers</h3>
-<p>While some can be supported somehow, they&apos;re mostly not, and thankfully they&apos;re USB connected and can be disabled by either the BIOS/UEFI firmware Setup screen (if possible) or by remapping your USB ports and disabling it. It can potentially save some juice.</p>
+                                <h1 id="optimizing-battery-life">Optimizing Battery Life</h1>
+<p>You may notice that your laptop uses a lot of power, possibly more than it did when you were using Windows. That&apos;s because Apple is configuring your device to operate like an Apple device. Since you have different hardware, you have a few extra steps to take to optimize battery life. Below you will find a few methods to test power usage, and to adjust your system parameters to improve battery life.</p>
+<h2 id="measuring-power-in-macos">Measuring Power in macOS</h2>
+<p>macOS exposes overall power usage under the SPPowerDataType data type. You can find the data either using terminal, or using coconut battery. Here&apos;s a simple function that calculates watts on demand.</p>
+<pre><code class="lang-text">watts() {
+  FORMULA=$(system_profiler SPPowerDataType | awk &apos;/Amperage\ \(mA\):/ {printf $3&quot; * &quot;}; /Voltage\ \(mV\):/ {print $3}&apos;)
+  WATTS=$(echo &quot;scale=3; ${FORMULA} / 1000000&quot; | bc 2&gt;/dev/null)
+  if ! [[ ${WATTS} =~ [0-9] ]];
+  then
+    WATTS=0
+  fi
+  echo &quot;${WATTS} mW&quot;
+}
+</code></pre>
+<p>Run it in a terminal to create a function called &apos;watts&apos;. If you would like the command to be persistent, you should add it to your user profile (~/.profile). You&apos;ll see a negative number when you&apos;re discharging which is your discharge watts. When you&apos;re charging that number will be positive, that&apos;s the power draw of charging. If you see a negative number while charging, you&apos;re probably in the 97-100% range and overcharging protection is preventing the computer from charging.</p>
+<p>Below is another function that is similar to Activity Monitor&apos;s Energy tab, but run from a terminal.</p>
+<pre><code class="lang-text">powertop() {
+  top -stats pid,command,power -o power
+}
+</code></pre>
+<p>As before it isn&apos;t persistent, so you&apos;ll want to add it to your profile if you want to use it after a reboot or after you close the terminal. To use it, just run &apos;powertop&apos;.</p>
+<p>Another command that you can use to track energy usage is called powermetrics. It is a macOS built-in command that will provide more in-depth stats on what your CPU is actually doing.</p>
+<pre><code class="lang-text">sudo powermetrics --show-process-energy
+</code></pre>
+<h3 id="coconut-battery">Coconut Battery</h3>
+<p>If you prefer GUI tools, or would like power usage in your menu bar, CoconutBattery is a great resource. You may notice that you aren&apos;t getting any cycle count statistics and your battery temperature is reporting -273C. Don&apos;t worry about that, your battery probably doesn&apos;t have those features.</p>
+<p><a href="https://www.coconut-flavour.com/coconutbattery/" target="_blank">Visit the Coconut Battery website</a></p>
+<h2 id="optimizing-your-battery-life">Optimizing Your Battery Life</h2>
+<h3 id="cpufriend">CPUFriend</h3>
+<p>If you are using the SMBIOS of a 2015+ Macbook or 2016+ Macbook Pro, the tool for this job is called CPUFriend and you can download it from Github. If you are using the SMBIOS of an earlier Macbook or Macbook Pro, skip to the ssdtPRGen section instead.</p>
+<p><a href="https://github.com/acidanthera/CPUFriend" target="_blank">Download CPUFriend @ Github</a></p>
+<p>CPUFriend needs a helper to operate properly on your system, and corpnewt has written a tool that will help you do exactly that called CPUFriendFriend. Visit the project page for instructions on how to download and use it.</p>
+<p><a href="https://github.com/corpnewt/CPUFriendFriend" target="_blank">CPUFriendFriend @ Github</a></p>
+<p>When you run CPUFriendFriend you will be prompted to enter your base clock speed. This is the TDP-down clock rate if supported. If you don&apos;t know, or if it isn&apos;t disclosed, try 800MHz.</p>
+<p>Look your CPU up on Intel&apos;s Ark website to find the data that you need.</p>
+<p><a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors" target="_blank">Visit Intel&apos;s Ark Website</a></p>
+<p>Next you will be asked to enter an EPP value. This is explained in the instructions, but below is a table that may help you make your decision.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0x00</td>
+<td style="text-align:left">Performance - Instructs the processor to scale as fast as possible.</td>
+</tr>
+<tr>
+<td style="text-align:left">0x40</td>
+<td style="text-align:left">Balance performance - Scale at a rate that offers better performance while considering battery life.</td>
+</tr>
+<tr>
+<td style="text-align:left">0x80</td>
+<td style="text-align:left">Balance power - Scale at a rate that prefers battery life while slightly sacrificing performance.</td>
+</tr>
+<tr>
+<td style="text-align:left">0xC0</td>
+<td style="text-align:left">Max Power saving - Sacrifice performance for battery life while still performing well enough for normal tasks.</td>
+</tr>
+</tbody>
+</table>
+<p>Once CPUFriendFriend has been run, copy the CPUFriend and CPUFriendDataProvider kexts to C/k/O. Once that&apos;s finished, open your config.plist and make sure that SSDT/Generate/PluginType is set to true. Finally, reboot.</p>
+<p>You should immediately notice a difference in battery life.</p>
+<h3 id="ssdtprgen">ssdtPRGen</h3>
+<p>Users of SMBIOS of Macbook Pros earlier than 2016 should use tool called ssdtPRGen written by Piker Alpha to configure scaling. Visit the project page and use the tool to create an SSDT for your CPU.</p>
+<p><a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank">Visit ssdtPRGen @ Github</a></p>
+<p>Using ssdtPRGen is relatively simple, run the utility and follow the prompts. This will create a frequency configuration for your system and place the files in ~/Library/ssdtPRGen. Copy ~/Library/ssdtPRGen/ssdt.aml to CLOVER/ACPI/patched, update CLOVER if you are using a strict SSDT configuration (sorted order with an explicit list of SSDTs in config.plist), make sure SSDT/Generate/PluginType is set to True, and reboot. If you are not using a strict SSDT configuration in CLOVER you can ignore that step and just reboot.</p>
 
                                 
                                 </section>
@@ -655,12 +684,12 @@
 
             
                 
-                <a href="../a-guide-to-build-guides.html" class="navigation navigation-prev " aria-label="Previous page: A Guide to Build Guides">
+                <a href="correcting-sleep-problems.html" class="navigation navigation-prev " aria-label="Previous page: Correcting Sleep Problems">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="bios-configuration.html" class="navigation navigation-next " aria-label="Next page: BIOS Configuration">
+                <a href="../extras/enabling-filevault.html" class="navigation navigation-next " aria-label="Next page: Enabling FileVault">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -671,7 +700,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Know Your Hardware","level":"2.1","depth":1,"next":{"title":"BIOS Configuration","level":"2.2","depth":1,"path":"before-you-start/bios-configuration.md","ref":"before-you-start/bios-configuration.md","articles":[]},"previous":{"title":"A Guide to Build Guides","level":"1.2","depth":1,"path":"a-guide-to-build-guides.md","ref":"a-guide-to-build-guides.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"before-you-start/know-your-hardware.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Optimizing Battery Life","level":"6.3","depth":1,"next":{"title":"Enabling FileVault","level":"7.1","depth":1,"path":"extras/enabling-filevault.md","ref":"extras/enabling-filevault.md","articles":[]},"previous":{"title":"Correcting Sleep Problems","level":"6.2","depth":1,"path":"battery-power-management/correcting-sleep-problems.md","ref":"battery-power-management/correcting-sleep-problems.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"battery-power-management/optimizing-battery-life.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

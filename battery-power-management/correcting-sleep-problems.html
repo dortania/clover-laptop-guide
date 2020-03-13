@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Know Your Hardware · GitBook</title>
+        <title>Correcting Sleep Problems · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="bios-configuration.html" />
+    <link rel="next" href="optimizing-battery-life.html" />
     
     
-    <link rel="prev" href="../a-guide-to-build-guides.html" />
+    <link rel="prev" href="locate-that-missing-battery.html" />
     
 
     </head>
@@ -131,9 +131,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="know-your-hardware.html">
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
             
-                <a href="know-your-hardware.html">
+                <a href="../before-you-start/know-your-hardware.html">
             
                     
                     Know Your Hardware
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="bios-configuration.html">
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
             
-                <a href="bios-configuration.html">
+                <a href="../before-you-start/bios-configuration.html">
             
                     
                     BIOS Configuration
@@ -445,9 +445,9 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+        <li class="chapter " data-level="6.1" data-path="locate-that-missing-battery.html">
             
-                <a href="../battery-power-management/locate-that-missing-battery.html">
+                <a href="locate-that-missing-battery.html">
             
                     
                     Locate that Missing Battery
@@ -458,9 +458,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+        <li class="chapter active" data-level="6.2" data-path="correcting-sleep-problems.html">
             
-                <a href="../battery-power-management/correcting-sleep-problems.html">
+                <a href="correcting-sleep-problems.html">
             
                     
                     Correcting Sleep Problems
@@ -471,9 +471,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="../battery-power-management/optimizing-battery-life.html">
+        <li class="chapter " data-level="6.3" data-path="optimizing-battery-life.html">
             
-                <a href="../battery-power-management/optimizing-battery-life.html">
+                <a href="optimizing-battery-life.html">
             
                     
                     Optimizing Battery Life
@@ -573,7 +573,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Know Your Hardware</a>
+        <a href=".." >Correcting Sleep Problems</a>
     </h1>
 </div>
 
@@ -588,46 +588,249 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="know-your-hardware">Know Your Hardware</h1>
-<h2 id="know-your-hardware">Know your Hardware!</h2>
-<p>Knowing your hardware is the single most imporant component of your Hackintosh journey. Your laptop has a lot of components ranging from the CPU and memory to WIFI and USB ports. Learning everything you can down to the physical IDs and locations of components on the bus can make the difference between a successful and relatively painless Hackintosh experience, and failure.</p>
-<p>Remember, the only person responsible for the success or failure of your build is you! With that in mind, it&apos;s important to note that you are also responsible should anything go wrong or if your computer breaks by following any of the advice or guidance provided by this guide.</p>
-<h3 id="vendor-manuals">Vendor Manuals</h3>
-<p>Your laptop vendor publishes information that documents the general makeup of your system. You want to start here. Download the users manual, and read it from cover to cover. If your vendor also publishes a service manual, that will be very helpful to read in advance. Examples of where this documentation will come in handy would be locating BIOS settings, or identifying part numbers of hardware for deeper inspection.</p>
-<h3 id="native-os-tools">Native OS Tools</h3>
-<p>Your system probably ships with Windows, use the built-in tools such as <strong>System Information</strong> and <strong>Device Manager</strong> to collect general information about your hardware.</p>
-<h3 id="linux-tools">Linux Tools</h3>
-<p>Keep a bootable live USB of your favorite Linux distribution close by as it will include a variety of tools for deep inspection of devices. Tools such as:</p>
-<ul>
-<li><code>lspci</code> (Display detailed information about your PCI/PCIe devices)</li>
-<li><code>lsusb</code> (Same for USB devices)</li>
-<li><code>dmidecode</code> (Detailed dump of DMI configuration data including memory slots, firmware, and more)</li>
-</ul>
-<p>A Linux USB will also be helpful in the event you need to collect information about your devices, for example it would be used to collect detailed information about your audio codec for troubleshooting purposes.</p>
-<h2 id="incompatible-hardware">Incompatible Hardware</h2>
-<p>There are a lot of devices that are difficult or impossible to make work with macOS. These devices simply aren&apos;t supported, or may be partially supported but you could have serious issues.</p>
-<h3 id="amd-cpus">AMD CPUs</h3>
-<p>AMD CPUs and their associated iGPUs are unsupported in macOS. While it&apos;s possible to work around these issues with CPU patches and adding a dGPU on a desktop, you cannot add a dGPU to a laptop. AMD systems with dGPUs often use software mux switches which are also incompatible with macOS.</p>
-<h3 id="intel-cpus">Intel CPUs</h3>
-<p>macOS Mojave doesn&apos;t support any Intel processors earlier than generation 3 core CPUs due to a lack of Metal support in the integrated GPU. It is possible to get these processors working with various patches and hacks but you are better off staying with earlier versions of macOS instead.</p>
-<p>You can also add to this list:</p>
-<ul>
-<li>Pentiums</li>
-<li>Celerons</li>
-<li>Atoms</li>
-</ul>
-<h3 id="wifi-cards">WIFI cards</h3>
-<p>Do you have an Intel, Atheros, Realtek, or Broadcom device that isn&apos;t a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A _**_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.</p>
-<p>If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.</p>
-<p>Before purchasing make sure your Laptop doesn&apos;t have a whitelist that prevents the card from working. Yes, that&apos;s actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years.</p>
-<h3 id="gpus">GPUs</h3>
-<p>Does your laptop have an AMD or Nvidia GPU? You&apos;ll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple&apos;s use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. But that is still experimental and very unstable for some devices.</p>
-<h3 id="built-in-sdcard-readers">Built in SDCard Readers</h3>
-<p>If you have an SDCard reader that&apos;s connected through an internal USB hub, it&apos;s probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you&apos;re probably going to want to fake the ID so it appears as a native reader to the operating system. See! We&apos;re not even to the next page yet, and it&apos;s already important to know your hardware!</p>
-<h3 id="fingerprint-readers">Fingerprint Readers</h3>
-<p>Apple only supports their implementation of fingerprint readers through Touch ID. You may as well turn it off in your BIOS and save a little bit of power. While you&apos;re in there, turn off that USB SDCard reader as well!</p>
-<h3 id="smartcard-readers">SmartCard Readers</h3>
-<p>While some can be supported somehow, they&apos;re mostly not, and thankfully they&apos;re USB connected and can be disabled by either the BIOS/UEFI firmware Setup screen (if possible) or by remapping your USB ports and disabling it. It can potentially save some juice.</p>
+                                <h1 id="correcting-sleep-problems">Correcting Sleep Problems</h1>
+<p>Are you experiencing a condition where you tell your computer to sleep, and it starts to do as instructed but then laughs in your face? Well, you are not alone! That&apos;s a condition that most of us face, but we can fix it! There are a few things that can cause this problem, some of which we&apos;ve corrected before ever reaching this section (How about that!). Let&apos;s talk about each one.</p>
+<h2 id="usb-port-mapping">USB Port Mapping</h2>
+<p>That&apos;s right..if you&apos;re using USBInjectAll in its default configuration, or you have no USB port injection at all, it could cause this condition. That isn&apos;t a problem for you though because we&apos;ve already fixed it.</p>
+<h2 id="disabling-hibernation">Disabling Hibernation</h2>
+<p>Hibernation isn&apos;t well supported on hackintoshes, and in some cases it doesn&apos;t work at all. We can mitigate this problem by configuring macOS to use standby mode which will preserve what&apos;s in memory on sleep but will not write it out to disk and power off the machine.</p>
+<pre><code class="lang-text">sudo pmset hibernatemode 0
+sudo pmset standby 0
+sudo pmset autopoweroff 0
+</code></pre>
+<h2 id="finding-wake-reasons-for-correction">Finding Wake Reasons for Correction</h2>
+<p>Before talking about the remaining items that cause wakeups, we need to talk about how to tell what&apos;s waking your system up. There are a couple of very common reasons and the correction is similar for all of them. To find out what&apos;s waking your system, put it to sleep. Do it right now. Alright, it&apos;s probably already woken up so let&apos;s take a look at the log.</p>
+<pre><code class="lang-text">pmset -g log | grep -e &quot;Wake.*due to &quot;
+</code></pre>
+<p>Yep, that&apos;s a ton of data. You&apos;re looking for a couple of specific things though and they should be pretty close to the bottom of the log.</p>
+<h2 id="wake-on-glan">Wake on GLAN</h2>
+<p>If you see an entry in the log that looks similar to this one, you&apos;ll need to disable Wake on Lan in your BIOS. If that doesn&apos;t work, a patch is necessary.</p>
+<pre><code class="lang-text">Wake [CDNVA] due to GLAN: Using AC
+</code></pre>
+<h2 id="wake-on-hdef">Wake on HDEF</h2>
+<p>This message looks similar to the GLAN log entry. If you see it, you definitely need a patch.</p>
+<pre><code class="lang-text">Wake [CDNVA] due to HDEF&#xFEFF;: Using AC
+</code></pre>
+<h2 id="wake-on-xhci">Wake on XHCI</h2>
+<p>This message is one of the most common that you may come across. It also looks similar to the other messages in the log. If you see it, you need a patch.</p>
+<pre><code class="lang-text">Wake [CDNVA] due to XHC&#xFEFF;: Using AC
+</code></pre>
+<h2 id="rtcmaintenance-wakes">RTC/Maintenance Wakes</h2>
+<p>Maintenance wakes are normal behavior, and are related to PowerNap. When PowerNap is enabled your computer will wake up to check email, initiate Time Machine backups, and sync with iCloud. Those wakes look similar to the following.</p>
+<pre><code class="lang-text">DarkWake from Normal Sleep [CDNPB] : due to RTC/Maintenance Using AC
+</code></pre>
+<p>If these wakes are not desired, disable PowerNap.</p>
+<h2 id="wake-on-rtc-alarm">Wake on RTC Alarm</h2>
+<p>RTC Alarm wakes are generated by applications that use enhanced notifications that are left running while the system is asleep. Examples of applications that cause this wake type would be Messages, or Facebook. Those wakes may look like this.</p>
+<pre><code class="lang-text">Wake reason: RTC (Alarm)
+</code></pre>
+<p>If these wakes are undesirable, close any applications that may create them before allowing the device to sleep.</p>
+<h2 id="patching-to-correct-sleep-issues">Patching To Correct Sleep Issues</h2>
+<p>The good news is that you can probably correct all of these issues with a single CLOVER configuration change and SSDT hotpatch from Rehabman! Determine which patch you need by inspecting your DSDT and matching the methods to the patches below.</p>
+<h3 id="patch-method-1-gprw2n">Patch Method #1 (GPRW,2,N)</h3>
+<p>Search your DSDT for PRW. If you find method GPRW, use these patches.</p>
+<p>Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array in config.plist.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Comment</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</td>
+</tr>
+<tr>
+<td style="text-align:left">Disabled</td>
+<td style="text-align:left">Bool</td>
+<td style="text-align:left">False</td>
+</tr>
+<tr>
+<td style="text-align:left">Find</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">4750525702</td>
+</tr>
+<tr>
+<td style="text-align:left">Replace</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">5850525702</td>
+</tr>
+</tbody>
+</table>
+<p>Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-GPRW.aml.</p>
+<pre><code class="lang-text">// For solving instant wake by hooking GPRW or UPRW
+
+#ifndef NO_DEFINITIONBLOCK
+DefinitionBlock(&quot;&quot;, &quot;SSDT&quot;, 2, &quot;hack&quot;, &quot;_GPRW&quot;, 0)
+{
+#endif
+    External(XPRW, MethodObj)
+    External(RMCF.DWOU, IntObj)
+
+    // In DSDT, native GPRW is renamed to XPRW with Clover binpatch.
+    // As a result, calls to GPRW land here.
+    // The purpose of this implementation is to avoid &quot;instant wake&quot;
+    // by returning 0 in the second position (sleep state supported)
+    // of the return package.
+    Method(GPRW, 2)
+    {
+        For (,,)
+        {
+            // when RMCF.DWOU is provided and is zero, patch disabled
+            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
+            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
+            If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
+            If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
+            Break
+        }
+        Return (XPRW(Arg0, Arg1))
+    }
+#ifndef NO_DEFINITIONBLOCK
+}
+#endif
+//EOF
+</code></pre>
+<h3 id="patch-method-2-uprw2n">Patch Method #2 (UPRW,2,N)</h3>
+<p>Search your DSDT for PRW. If you find method UPRW, use these patches.</p>
+<p>Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array in config.plist.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Comment</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">change Method(UPRW,2,N) to XPRW, pair with SSDT-UPRW.aml</td>
+</tr>
+<tr>
+<td style="text-align:left">Disabled</td>
+<td style="text-align:left">Bool</td>
+<td style="text-align:left">False</td>
+</tr>
+<tr>
+<td style="text-align:left">Find</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">555052570a7012</td>
+</tr>
+<tr>
+<td style="text-align:left">Replace</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">585052570a7012</td>
+</tr>
+</tbody>
+</table>
+<p>Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-UPRW.aml.</p>
+<pre><code class="lang-text">// For solving instant wake by hooking GPRW or UPRW
+
+#ifndef NO_DEFINITIONBLOCK
+DefinitionBlock(&quot;&quot;, &quot;SSDT&quot;, 2, &quot;hack&quot;, &quot;_UPRW&quot;, 0)
+{
+#endif
+    External(XPRW, MethodObj)
+    External(RMCF.DWOU, IntObj)
+
+    // In DSDT, native UPRW is renamed to XPRW with Clover binpatch.
+    // As a result, calls to UPRW land here.
+    // The purpose of this implementation is to avoid &quot;instant wake&quot;
+    // by returning 0 in the second position (sleep state supported)
+    // of the return package.
+    Method(UPRW, 2)
+    {
+        For (,,)
+        {
+            // when RMCF.DWOU is provided and is zero, patch disabled
+            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
+            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
+            If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
+            If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
+        }
+        Return (XPRW(Arg0, Arg1))
+    }
+#ifndef NO_DEFINITIONBLOCK
+}
+#endif
+//EOF
+</code></pre>
+<h3 id="patch-method-3-lanc-prw2n">Patch Method #3 LANC (_PRW,2,N)</h3>
+<p>Search your DSDT for PRW. If you find method LANC _PRW, use these patches.</p>
+<p>Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array in config.plist.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Comment</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">change LANC (_PRW,0,S) to (XPRW,0,..), pair with SSDT-LANCPRW.aml</td>
+</tr>
+<tr>
+<td style="text-align:left">Disabled</td>
+<td style="text-align:left">Bool</td>
+<td style="text-align:left">False</td>
+</tr>
+<tr>
+<td style="text-align:left">Find</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">00001900141f5f50525708</td>
+</tr>
+<tr>
+<td style="text-align:left">Replace</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">00001900141f5850525708</td>
+</tr>
+</tbody>
+</table>
+<p>Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-LANCPRW.aml.</p>
+<pre><code class="lang-text">// For solving instant wake by hooking GPRW
+
+#ifndef NO_DEFINITIONBLOCK
+DefinitionBlock(&quot;&quot;, &quot;SSDT&quot;, 2, &quot;hack&quot;, &quot;_LANCPRW&quot;, 0)
+{
+#endif
+    External(XPRW, MethodObj)
+    External(RMCF.DWOU, IntObj)
+
+    // In DSDT, native LANC._PRW is renamed XPRW with Clover binpatch.
+    // As a result, calls to LANC._PRW land here.
+    // The purpose of this implementation is to avoid &quot;instant wake&quot;
+    // by returning 0 in the second position (sleep state supported)
+    // of the return package.
+    // LANC._PRW is renamed to XPRW so we can replace it here
+    External(_SB.PCI0.LANC.XPRW, MethodObj)
+    Method(_SB.PCI0.LANC._PRW)
+    {
+        Local0 = \_SB.PCI0.LANC.XPRW()
+        For (,,)
+        {
+            // when RMCF.DWOU is provided and is zero, patch disabled
+            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
+            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
+            Local0[1] = 0
+        }
+        Return(Local0)
+    }
+#ifndef NO_DEFINITIONBLOCK
+}
+#endif
+//EO
+</code></pre>
+<h2 id="laptop-still-have-insomnia">Laptop Still Have Insomnia?</h2>
+<p>In that case, you&apos;re going to have to create a custom patch for your system, here&apos;s a guide that should help you out.</p>
+<p><a href="https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/" target="_blank">[Guide] Using Clover to &quot;hotpatch&quot; ACPI</a></p>
 
                                 
                                 </section>
@@ -655,12 +858,12 @@
 
             
                 
-                <a href="../a-guide-to-build-guides.html" class="navigation navigation-prev " aria-label="Previous page: A Guide to Build Guides">
+                <a href="locate-that-missing-battery.html" class="navigation navigation-prev " aria-label="Previous page: Locate that Missing Battery">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="bios-configuration.html" class="navigation navigation-next " aria-label="Next page: BIOS Configuration">
+                <a href="optimizing-battery-life.html" class="navigation navigation-next " aria-label="Next page: Optimizing Battery Life">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -671,7 +874,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Know Your Hardware","level":"2.1","depth":1,"next":{"title":"BIOS Configuration","level":"2.2","depth":1,"path":"before-you-start/bios-configuration.md","ref":"before-you-start/bios-configuration.md","articles":[]},"previous":{"title":"A Guide to Build Guides","level":"1.2","depth":1,"path":"a-guide-to-build-guides.md","ref":"a-guide-to-build-guides.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"before-you-start/know-your-hardware.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Correcting Sleep Problems","level":"6.2","depth":1,"next":{"title":"Optimizing Battery Life","level":"6.3","depth":1,"path":"battery-power-management/optimizing-battery-life.md","ref":"battery-power-management/optimizing-battery-life.md","articles":[]},"previous":{"title":"Locate that Missing Battery","level":"6.1","depth":1,"path":"battery-power-management/locate-that-missing-battery.md","ref":"battery-power-management/locate-that-missing-battery.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"battery-power-management/correcting-sleep-problems.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Know Your Hardware · GitBook</title>
+        <title>What about KEXTs? · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="bios-configuration.html" />
+    <link rel="next" href="../prepare-install-macos/preparing-the-usb-media.html" />
     
     
-    <link rel="prev" href="../a-guide-to-build-guides.html" />
+    <link rel="prev" href="whats-an-efi.html" />
     
 
     </head>
@@ -131,9 +131,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="know-your-hardware.html">
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
             
-                <a href="know-your-hardware.html">
+                <a href="../before-you-start/know-your-hardware.html">
             
                     
                     Know Your Hardware
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="bios-configuration.html">
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
             
-                <a href="bios-configuration.html">
+                <a href="../before-you-start/bios-configuration.html">
             
                     
                     BIOS Configuration
@@ -164,9 +164,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+        <li class="chapter " data-level="3.1" data-path="a-little-unix-never-hurt-anyone.html">
             
-                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+                <a href="a-little-unix-never-hurt-anyone.html">
             
                     
                     A Little UNIX Never Hurt Anyone!
@@ -177,9 +177,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+        <li class="chapter " data-level="3.2" data-path="just-enough-git.html">
             
-                <a href="../useful-skills-terminology/just-enough-git.html">
+                <a href="just-enough-git.html">
             
                     
                     Just Enough GIT
@@ -190,9 +190,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+        <li class="chapter " data-level="3.3" data-path="whats-an-efi.html">
             
-                <a href="../useful-skills-terminology/whats-an-efi.html">
+                <a href="whats-an-efi.html">
             
                     
                     What's an EFI?
@@ -203,9 +203,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+        <li class="chapter active" data-level="3.4" data-path="what-about-kexts.html">
             
-                <a href="../useful-skills-terminology/what-about-kexts.html">
+                <a href="what-about-kexts.html">
             
                     
                     What about KEXTs?
@@ -573,7 +573,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Know Your Hardware</a>
+        <a href=".." >What about KEXTs?</a>
     </h1>
 </div>
 
@@ -588,46 +588,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="know-your-hardware">Know Your Hardware</h1>
-<h2 id="know-your-hardware">Know your Hardware!</h2>
-<p>Knowing your hardware is the single most imporant component of your Hackintosh journey. Your laptop has a lot of components ranging from the CPU and memory to WIFI and USB ports. Learning everything you can down to the physical IDs and locations of components on the bus can make the difference between a successful and relatively painless Hackintosh experience, and failure.</p>
-<p>Remember, the only person responsible for the success or failure of your build is you! With that in mind, it&apos;s important to note that you are also responsible should anything go wrong or if your computer breaks by following any of the advice or guidance provided by this guide.</p>
-<h3 id="vendor-manuals">Vendor Manuals</h3>
-<p>Your laptop vendor publishes information that documents the general makeup of your system. You want to start here. Download the users manual, and read it from cover to cover. If your vendor also publishes a service manual, that will be very helpful to read in advance. Examples of where this documentation will come in handy would be locating BIOS settings, or identifying part numbers of hardware for deeper inspection.</p>
-<h3 id="native-os-tools">Native OS Tools</h3>
-<p>Your system probably ships with Windows, use the built-in tools such as <strong>System Information</strong> and <strong>Device Manager</strong> to collect general information about your hardware.</p>
-<h3 id="linux-tools">Linux Tools</h3>
-<p>Keep a bootable live USB of your favorite Linux distribution close by as it will include a variety of tools for deep inspection of devices. Tools such as:</p>
-<ul>
-<li><code>lspci</code> (Display detailed information about your PCI/PCIe devices)</li>
-<li><code>lsusb</code> (Same for USB devices)</li>
-<li><code>dmidecode</code> (Detailed dump of DMI configuration data including memory slots, firmware, and more)</li>
-</ul>
-<p>A Linux USB will also be helpful in the event you need to collect information about your devices, for example it would be used to collect detailed information about your audio codec for troubleshooting purposes.</p>
-<h2 id="incompatible-hardware">Incompatible Hardware</h2>
-<p>There are a lot of devices that are difficult or impossible to make work with macOS. These devices simply aren&apos;t supported, or may be partially supported but you could have serious issues.</p>
-<h3 id="amd-cpus">AMD CPUs</h3>
-<p>AMD CPUs and their associated iGPUs are unsupported in macOS. While it&apos;s possible to work around these issues with CPU patches and adding a dGPU on a desktop, you cannot add a dGPU to a laptop. AMD systems with dGPUs often use software mux switches which are also incompatible with macOS.</p>
-<h3 id="intel-cpus">Intel CPUs</h3>
-<p>macOS Mojave doesn&apos;t support any Intel processors earlier than generation 3 core CPUs due to a lack of Metal support in the integrated GPU. It is possible to get these processors working with various patches and hacks but you are better off staying with earlier versions of macOS instead.</p>
-<p>You can also add to this list:</p>
-<ul>
-<li>Pentiums</li>
-<li>Celerons</li>
-<li>Atoms</li>
-</ul>
-<h3 id="wifi-cards">WIFI cards</h3>
-<p>Do you have an Intel, Atheros, Realtek, or Broadcom device that isn&apos;t a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A _**_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.</p>
-<p>If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.</p>
-<p>Before purchasing make sure your Laptop doesn&apos;t have a whitelist that prevents the card from working. Yes, that&apos;s actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years.</p>
-<h3 id="gpus">GPUs</h3>
-<p>Does your laptop have an AMD or Nvidia GPU? You&apos;ll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple&apos;s use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. But that is still experimental and very unstable for some devices.</p>
-<h3 id="built-in-sdcard-readers">Built in SDCard Readers</h3>
-<p>If you have an SDCard reader that&apos;s connected through an internal USB hub, it&apos;s probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you&apos;re probably going to want to fake the ID so it appears as a native reader to the operating system. See! We&apos;re not even to the next page yet, and it&apos;s already important to know your hardware!</p>
-<h3 id="fingerprint-readers">Fingerprint Readers</h3>
-<p>Apple only supports their implementation of fingerprint readers through Touch ID. You may as well turn it off in your BIOS and save a little bit of power. While you&apos;re in there, turn off that USB SDCard reader as well!</p>
-<h3 id="smartcard-readers">SmartCard Readers</h3>
-<p>While some can be supported somehow, they&apos;re mostly not, and thankfully they&apos;re USB connected and can be disabled by either the BIOS/UEFI firmware Setup screen (if possible) or by remapping your USB ports and disabling it. It can potentially save some juice.</p>
+                                <h1 id="what-about-kexts">What about KEXTs?</h1>
+<p>Glad you asked! A kext is a kernel extension that adds functionality and hardware support to macOS. There are some rules around kexts that you need to know, and here they are.</p>
+<h2 id="kext-paths">KEXT Paths</h2>
+<p><strong>/System/Library/Extensions (/S/L/E)</strong> - This is where Apple stores the kexts that macOS uses to boot and operate. If something is telling you to put a kext here, hard stop because it&apos;s probably wrong.</p>
+<p><strong>/Library/Extensions</strong> <strong>(/L/E)</strong> - This is a place for 3rd party developers to place signed kexts for hardware that you buy and connect to your computer. These developers have been granted a kernel signing certificate that is used to sign the kexts which tells macOS they&apos;re safe to use. If something tells you to put a kext here, hard stop as the same rule applies.</p>
+<p><strong>CLOVER/kexts/Other (C/k/O)</strong> - This is the location that CLOVER uses to inject functionality into the operating system for your Hackintosh to boot and operate. This is where all of your Hackintosh kexts go. Did you notice the lack of a slash before CLOVER? That&apos;s because you need to reference where you&apos;ve mounted your EFI partition before adding C/k/O. Remember that, you&apos;ll need to add the mount path anywhere in the guide that it&apos;s mentioned.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>Do <strong>NOT</strong> use S/L/E (or SLE for short) to install kexts to on 10.11 and later, it&apos;s usually secured by SIP for a reason.</p>
+<p>Learn more about System Integration Protection <a href="https://support.apple.com/en-us/HT204899" target="_blank">here</a>.</p>
+</div></div></p>
+<p>Following this policy keeps your system clean and allows you to fully enable System Integrity Protection increasing the security of your laptop.</p>
 
                                 
                                 </section>
@@ -655,12 +625,12 @@
 
             
                 
-                <a href="../a-guide-to-build-guides.html" class="navigation navigation-prev " aria-label="Previous page: A Guide to Build Guides">
+                <a href="whats-an-efi.html" class="navigation navigation-prev " aria-label="Previous page: What's an EFI?">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="bios-configuration.html" class="navigation navigation-next " aria-label="Next page: BIOS Configuration">
+                <a href="../prepare-install-macos/preparing-the-usb-media.html" class="navigation navigation-next " aria-label="Next page: Preparing the USB Media">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -671,7 +641,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Know Your Hardware","level":"2.1","depth":1,"next":{"title":"BIOS Configuration","level":"2.2","depth":1,"path":"before-you-start/bios-configuration.md","ref":"before-you-start/bios-configuration.md","articles":[]},"previous":{"title":"A Guide to Build Guides","level":"1.2","depth":1,"path":"a-guide-to-build-guides.md","ref":"a-guide-to-build-guides.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"before-you-start/know-your-hardware.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"What about KEXTs?","level":"3.4","depth":1,"next":{"title":"Preparing the USB Media","level":"4.1","depth":1,"path":"prepare-install-macos/preparing-the-usb-media.md","ref":"prepare-install-macos/preparing-the-usb-media.md","articles":[]},"previous":{"title":"What's an EFI?","level":"3.3","depth":1,"path":"useful-skills-terminology/whats-an-efi.md","ref":"useful-skills-terminology/whats-an-efi.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"useful-skills-terminology/what-about-kexts.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

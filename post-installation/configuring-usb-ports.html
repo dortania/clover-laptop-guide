@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Know Your Hardware · GitBook</title>
+        <title>Configuring USB Ports · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="bios-configuration.html" />
+    <link rel="next" href="enabling-wifi-and-bluetooth.html" />
     
     
-    <link rel="prev" href="../a-guide-to-build-guides.html" />
+    <link rel="prev" href="adding-clover-to-the-bios.html" />
     
 
     </head>
@@ -131,9 +131,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="know-your-hardware.html">
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
             
-                <a href="know-your-hardware.html">
+                <a href="../before-you-start/know-your-hardware.html">
             
                     
                     Know Your Hardware
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="bios-configuration.html">
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
             
-                <a href="bios-configuration.html">
+                <a href="../before-you-start/bios-configuration.html">
             
                     
                     BIOS Configuration
@@ -373,9 +373,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../post-installation/adding-clover-to-the-bios.html">
+        <li class="chapter " data-level="5.1" data-path="adding-clover-to-the-bios.html">
             
-                <a href="../post-installation/adding-clover-to-the-bios.html">
+                <a href="adding-clover-to-the-bios.html">
             
                     
                     Adding CLOVER to Your Boot Drive
@@ -386,9 +386,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../post-installation/configuring-usb-ports.html">
+        <li class="chapter active" data-level="5.2" data-path="configuring-usb-ports.html">
             
-                <a href="../post-installation/configuring-usb-ports.html">
+                <a href="configuring-usb-ports.html">
             
                     
                     Configuring USB Ports
@@ -399,9 +399,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../post-installation/enabling-wifi-and-bluetooth.html">
+        <li class="chapter " data-level="5.3" data-path="enabling-wifi-and-bluetooth.html">
             
-                <a href="../post-installation/enabling-wifi-and-bluetooth.html">
+                <a href="enabling-wifi-and-bluetooth.html">
             
                     
                     Enabling WIFI & Bluetooth
@@ -412,9 +412,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="../post-installation/setting-up-ethernet-adapters.html">
+        <li class="chapter " data-level="5.4" data-path="setting-up-ethernet-adapters.html">
             
-                <a href="../post-installation/setting-up-ethernet-adapters.html">
+                <a href="setting-up-ethernet-adapters.html">
             
                     
                     Setting up Ethernet Adapters
@@ -425,9 +425,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="../post-installation/configuring-your-audio-device.html">
+        <li class="chapter " data-level="5.5" data-path="configuring-your-audio-device.html">
             
-                <a href="../post-installation/configuring-your-audio-device.html">
+                <a href="configuring-your-audio-device.html">
             
                     
                     Configuring your Audio Device
@@ -573,7 +573,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Know Your Hardware</a>
+        <a href=".." >Configuring USB Ports</a>
     </h1>
 </div>
 
@@ -588,46 +588,142 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="know-your-hardware">Know Your Hardware</h1>
-<h2 id="know-your-hardware">Know your Hardware!</h2>
-<p>Knowing your hardware is the single most imporant component of your Hackintosh journey. Your laptop has a lot of components ranging from the CPU and memory to WIFI and USB ports. Learning everything you can down to the physical IDs and locations of components on the bus can make the difference between a successful and relatively painless Hackintosh experience, and failure.</p>
-<p>Remember, the only person responsible for the success or failure of your build is you! With that in mind, it&apos;s important to note that you are also responsible should anything go wrong or if your computer breaks by following any of the advice or guidance provided by this guide.</p>
-<h3 id="vendor-manuals">Vendor Manuals</h3>
-<p>Your laptop vendor publishes information that documents the general makeup of your system. You want to start here. Download the users manual, and read it from cover to cover. If your vendor also publishes a service manual, that will be very helpful to read in advance. Examples of where this documentation will come in handy would be locating BIOS settings, or identifying part numbers of hardware for deeper inspection.</p>
-<h3 id="native-os-tools">Native OS Tools</h3>
-<p>Your system probably ships with Windows, use the built-in tools such as <strong>System Information</strong> and <strong>Device Manager</strong> to collect general information about your hardware.</p>
-<h3 id="linux-tools">Linux Tools</h3>
-<p>Keep a bootable live USB of your favorite Linux distribution close by as it will include a variety of tools for deep inspection of devices. Tools such as:</p>
-<ul>
-<li><code>lspci</code> (Display detailed information about your PCI/PCIe devices)</li>
-<li><code>lsusb</code> (Same for USB devices)</li>
-<li><code>dmidecode</code> (Detailed dump of DMI configuration data including memory slots, firmware, and more)</li>
-</ul>
-<p>A Linux USB will also be helpful in the event you need to collect information about your devices, for example it would be used to collect detailed information about your audio codec for troubleshooting purposes.</p>
-<h2 id="incompatible-hardware">Incompatible Hardware</h2>
-<p>There are a lot of devices that are difficult or impossible to make work with macOS. These devices simply aren&apos;t supported, or may be partially supported but you could have serious issues.</p>
-<h3 id="amd-cpus">AMD CPUs</h3>
-<p>AMD CPUs and their associated iGPUs are unsupported in macOS. While it&apos;s possible to work around these issues with CPU patches and adding a dGPU on a desktop, you cannot add a dGPU to a laptop. AMD systems with dGPUs often use software mux switches which are also incompatible with macOS.</p>
-<h3 id="intel-cpus">Intel CPUs</h3>
-<p>macOS Mojave doesn&apos;t support any Intel processors earlier than generation 3 core CPUs due to a lack of Metal support in the integrated GPU. It is possible to get these processors working with various patches and hacks but you are better off staying with earlier versions of macOS instead.</p>
-<p>You can also add to this list:</p>
-<ul>
-<li>Pentiums</li>
-<li>Celerons</li>
-<li>Atoms</li>
-</ul>
-<h3 id="wifi-cards">WIFI cards</h3>
-<p>Do you have an Intel, Atheros, Realtek, or Broadcom device that isn&apos;t a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A _**_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.</p>
-<p>If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.</p>
-<p>Before purchasing make sure your Laptop doesn&apos;t have a whitelist that prevents the card from working. Yes, that&apos;s actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years.</p>
-<h3 id="gpus">GPUs</h3>
-<p>Does your laptop have an AMD or Nvidia GPU? You&apos;ll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple&apos;s use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. But that is still experimental and very unstable for some devices.</p>
-<h3 id="built-in-sdcard-readers">Built in SDCard Readers</h3>
-<p>If you have an SDCard reader that&apos;s connected through an internal USB hub, it&apos;s probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you&apos;re probably going to want to fake the ID so it appears as a native reader to the operating system. See! We&apos;re not even to the next page yet, and it&apos;s already important to know your hardware!</p>
-<h3 id="fingerprint-readers">Fingerprint Readers</h3>
-<p>Apple only supports their implementation of fingerprint readers through Touch ID. You may as well turn it off in your BIOS and save a little bit of power. While you&apos;re in there, turn off that USB SDCard reader as well!</p>
-<h3 id="smartcard-readers">SmartCard Readers</h3>
-<p>While some can be supported somehow, they&apos;re mostly not, and thankfully they&apos;re USB connected and can be disabled by either the BIOS/UEFI firmware Setup screen (if possible) or by remapping your USB ports and disabling it. It can potentially save some juice.</p>
+                                <h1 id="configuring-usb-ports">Configuring USB Ports</h1>
+<p>I agree..the need to configure USB ports does sound a little weird, but it is a necessity on a Hackintosh as Apple uses a very strict configuration for USB and the macOS kernel does not autodetect and configure ports for you. You may be thinking that you don&apos;t need it because your USB ports seem to work fine, but mapping ports can help resolve instant wake problems, and things like bluetooth and touch screens not working properly. One item of note, if you ever have to change your SMBIOS it will invalidate your USB map and you&apos;ll have to map your ports again.</p>
+<h2 id="understanding-port-limits">Understanding Port Limits</h2>
+<p>As mentioned previously, macOS has a very strict USB configuration by default, and that includes a hard limit of 15 USB ports. That doesn&apos;t sound like it&apos;s a big deal, but if your computer has USB 3.0 every 3.0 port uses 2 ports on the bus; a low speed port (HS) and a super speed port (SS). Your computer has both internal and external USB ports as well, so it&apos;s not as simple as just counting the ports you can see and doubling them. To correct this problem long enough to map the ports that you need, we need to add a few patches to the config.plist if they aren&apos;t already there. Once the port limit has been lifted and your ports have been mapped, disable the patches to prevent instability in macOS.</p>
+<h3 id="applying-the-port-limit-patches">Applying the Port Limit Patches</h3>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p><strong>DO NOT</strong> use these as a permanent solution, they&apos;re only temporary fixes until you map all your USB ports.</p>
+</div></div></p>
+<p>Mount up your EFI partition if it isn&apos;t already and then we&apos;ll merge these patches using your favorite text editor (remember, I prefer <a href="https://atom.io" target="_blank">Atom</a>).</p>
+<p>Add the patches to an array called KextsToPatch under KernelAndKextPatches. If the array does not exist, go ahead and create it. Save and close the file. If you&apos;re using the guide template these patches already exist so just make sure they&apos;re enabled.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Comment</th>
+<th style="text-align:left">Disabled</th>
+<th style="text-align:left">Find</th>
+<th style="text-align:left">Replace</th>
+<th style="text-align:left">InfoPlistPatch</th>
+<th style="text-align:left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">83FB0F0F</td>
+<td style="text-align:left">83FB3F0F</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">com.apple.iokit.IOUSBHostFamily</td>
+</tr>
+<tr>
+<td style="text-align:left">USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">83E30FD3</td>
+<td style="text-align:left">83E33FD3</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">com.apple.iokit.IOUSBHostFamily</td>
+</tr>
+<tr>
+<td style="text-align:left">USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">83FB0F0F</td>
+<td style="text-align:left">83FB3F0F</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">com.apple.iokit.IOUSBHostFamily</td>
+</tr>
+<tr>
+<td style="text-align:left">USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">83FF0F0F</td>
+<td style="text-align:left">83FF3F0F</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">com.apple.iokit.IOUSBHostFamily</td>
+</tr>
+<tr>
+<td style="text-align:left">USB Port limit patch #5 10.15.x modify by DalianSky(credits PMheart)</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">83F90F0F</td>
+<td style="text-align:left">83F93F0F</td>
+<td style="text-align:left">False</td>
+<td style="text-align:left">com.apple.iokit.IOUSBHostFamily</td>
+</tr>
+</tbody>
+</table>
+<h2 id="information-about-port-types">Information About Port Types</h2>
+<p>There are only three port types that you should be concerned with. These types and their descriptions can be found in the table below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Port</th>
+<th style="text-align:left">Port description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Type 0</td>
+<td style="text-align:left">This is a standard external USB 2.0 port.</td>
+</tr>
+<tr>
+<td style="text-align:left">Type 3</td>
+<td style="text-align:left">This port is an external USB-A or USB-C 3.0 port.</td>
+</tr>
+<tr>
+<td style="text-align:left">Type 255</td>
+<td style="text-align:left">This is a port on the motherboard for internal devices.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="are-my-devices-internal-or-external">Are My Devices Internal or External?</h2>
+<p>Well, they&apos;re probably both actually. You would determine if it&apos;s an internal or external port by whether it is inside the computer, or outside as a port that you plug devices into. Some common examples can be found in the table below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Device</th>
+<th style="text-align:left">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Thumb Drives</td>
+<td style="text-align:left">External</td>
+</tr>
+<tr>
+<td style="text-align:left">Bluetooth inside my computer (m.2 or Mini PCIe)</td>
+<td style="text-align:left">Internal</td>
+</tr>
+<tr>
+<td style="text-align:left">Bluetooth that I plug in</td>
+<td style="text-align:left">External</td>
+</tr>
+<tr>
+<td style="text-align:left">Touch Screen</td>
+<td style="text-align:left">Internal</td>
+</tr>
+<tr>
+<td style="text-align:left">Webcam</td>
+<td style="text-align:left">Internal</td>
+</tr>
+<tr>
+<td style="text-align:left">WIFI Dongle</td>
+<td style="text-align:left">External</td>
+</tr>
+<tr>
+<td style="text-align:left">SDCard Reader that I plug in</td>
+<td style="text-align:left">External</td>
+</tr>
+</tbody>
+</table>
+<p>Remember, internal devices are of type 255 and external devices depend on the type of port. If you don&apos;t know what kind of external ports you have, consult your laptop service manual or user guide.</p>
+<h2 id="inject-all-the-ports">Inject All The Ports!</h2>
+<p>A prerequisite to mapping your ports is injecting every port imagineable into your installation temporarily. That allows the mapping utility to see all of the ports available to your system. The kernel extension needed for this to work is called USBInjectAll, and it can be found in Rehabman&apos;s Bitbucket repository. Download the kext, and add it to C/k/O. You&apos;ll need to reboot before continuing.</p>
+<p><a href="https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/" target="_blank">Download USBInjectAll @ Bitbucket</a></p>
+<h2 id="mapping-usb-ports">Mapping USB Ports</h2>
+<p>Now that you&apos;re armed with knowledge about your USB devices and you&apos;ve fixed that pesky port limit, it&apos;s time to map your ports. So, what do we need to do to map the ports? Good question! For this, we need to use corpnewt&apos;s wonderful USBMap utility. Go ahead and download that now. It&apos;s important to read the utility&apos;s README for information on how to use the tool, and how to adjust your ports as described above.</p>
+<p><a href="https://github.com/corpnewt/USBMap" target="_blank">Visit USBMap @ Github</a></p>
+<p>After saving your changes, the USBMap tool will create several files and open a finder window. Take the USBMap.kext that you&apos;ve just created and copy it to C/k/O. Delete USBInjectAll, you won&apos;t need it any longer.</p>
+<p>After verifying the ports you need are mapped and working properly, disable the port limit patches.</p>
 
                                 
                                 </section>
@@ -655,12 +751,12 @@
 
             
                 
-                <a href="../a-guide-to-build-guides.html" class="navigation navigation-prev " aria-label="Previous page: A Guide to Build Guides">
+                <a href="adding-clover-to-the-bios.html" class="navigation navigation-prev " aria-label="Previous page: Adding CLOVER to Your Boot Drive">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="bios-configuration.html" class="navigation navigation-next " aria-label="Next page: BIOS Configuration">
+                <a href="enabling-wifi-and-bluetooth.html" class="navigation navigation-next " aria-label="Next page: Enabling WIFI & Bluetooth">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -671,7 +767,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Know Your Hardware","level":"2.1","depth":1,"next":{"title":"BIOS Configuration","level":"2.2","depth":1,"path":"before-you-start/bios-configuration.md","ref":"before-you-start/bios-configuration.md","articles":[]},"previous":{"title":"A Guide to Build Guides","level":"1.2","depth":1,"path":"a-guide-to-build-guides.md","ref":"a-guide-to-build-guides.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"before-you-start/know-your-hardware.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Configuring USB Ports","level":"5.2","depth":1,"next":{"title":"Enabling WIFI & Bluetooth","level":"5.3","depth":1,"path":"post-installation/enabling-wifi-and-bluetooth.md","ref":"post-installation/enabling-wifi-and-bluetooth.md","articles":[]},"previous":{"title":"Adding CLOVER to Your Boot Drive","level":"5.1","depth":1,"path":"post-installation/adding-clover-to-the-bios.md","ref":"post-installation/adding-clover-to-the-bios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"post-installation/configuring-usb-ports.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

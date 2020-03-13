@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Know Your Hardware · GitBook</title>
+        <title>Enabling WIFI & Bluetooth · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -66,10 +66,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="bios-configuration.html" />
+    <link rel="next" href="setting-up-ethernet-adapters.html" />
     
     
-    <link rel="prev" href="../a-guide-to-build-guides.html" />
+    <link rel="prev" href="configuring-usb-ports.html" />
     
 
     </head>
@@ -131,9 +131,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="know-your-hardware.html">
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
             
-                <a href="know-your-hardware.html">
+                <a href="../before-you-start/know-your-hardware.html">
             
                     
                     Know Your Hardware
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="bios-configuration.html">
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
             
-                <a href="bios-configuration.html">
+                <a href="../before-you-start/bios-configuration.html">
             
                     
                     BIOS Configuration
@@ -373,9 +373,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../post-installation/adding-clover-to-the-bios.html">
+        <li class="chapter " data-level="5.1" data-path="adding-clover-to-the-bios.html">
             
-                <a href="../post-installation/adding-clover-to-the-bios.html">
+                <a href="adding-clover-to-the-bios.html">
             
                     
                     Adding CLOVER to Your Boot Drive
@@ -386,9 +386,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../post-installation/configuring-usb-ports.html">
+        <li class="chapter " data-level="5.2" data-path="configuring-usb-ports.html">
             
-                <a href="../post-installation/configuring-usb-ports.html">
+                <a href="configuring-usb-ports.html">
             
                     
                     Configuring USB Ports
@@ -399,9 +399,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../post-installation/enabling-wifi-and-bluetooth.html">
+        <li class="chapter active" data-level="5.3" data-path="enabling-wifi-and-bluetooth.html">
             
-                <a href="../post-installation/enabling-wifi-and-bluetooth.html">
+                <a href="enabling-wifi-and-bluetooth.html">
             
                     
                     Enabling WIFI & Bluetooth
@@ -412,9 +412,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="../post-installation/setting-up-ethernet-adapters.html">
+        <li class="chapter " data-level="5.4" data-path="setting-up-ethernet-adapters.html">
             
-                <a href="../post-installation/setting-up-ethernet-adapters.html">
+                <a href="setting-up-ethernet-adapters.html">
             
                     
                     Setting up Ethernet Adapters
@@ -425,9 +425,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="../post-installation/configuring-your-audio-device.html">
+        <li class="chapter " data-level="5.5" data-path="configuring-your-audio-device.html">
             
-                <a href="../post-installation/configuring-your-audio-device.html">
+                <a href="configuring-your-audio-device.html">
             
                     
                     Configuring your Audio Device
@@ -573,7 +573,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Know Your Hardware</a>
+        <a href=".." >Enabling WIFI & Bluetooth</a>
     </h1>
 </div>
 
@@ -588,46 +588,158 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="know-your-hardware">Know Your Hardware</h1>
-<h2 id="know-your-hardware">Know your Hardware!</h2>
-<p>Knowing your hardware is the single most imporant component of your Hackintosh journey. Your laptop has a lot of components ranging from the CPU and memory to WIFI and USB ports. Learning everything you can down to the physical IDs and locations of components on the bus can make the difference between a successful and relatively painless Hackintosh experience, and failure.</p>
-<p>Remember, the only person responsible for the success or failure of your build is you! With that in mind, it&apos;s important to note that you are also responsible should anything go wrong or if your computer breaks by following any of the advice or guidance provided by this guide.</p>
-<h3 id="vendor-manuals">Vendor Manuals</h3>
-<p>Your laptop vendor publishes information that documents the general makeup of your system. You want to start here. Download the users manual, and read it from cover to cover. If your vendor also publishes a service manual, that will be very helpful to read in advance. Examples of where this documentation will come in handy would be locating BIOS settings, or identifying part numbers of hardware for deeper inspection.</p>
-<h3 id="native-os-tools">Native OS Tools</h3>
-<p>Your system probably ships with Windows, use the built-in tools such as <strong>System Information</strong> and <strong>Device Manager</strong> to collect general information about your hardware.</p>
-<h3 id="linux-tools">Linux Tools</h3>
-<p>Keep a bootable live USB of your favorite Linux distribution close by as it will include a variety of tools for deep inspection of devices. Tools such as:</p>
-<ul>
-<li><code>lspci</code> (Display detailed information about your PCI/PCIe devices)</li>
-<li><code>lsusb</code> (Same for USB devices)</li>
-<li><code>dmidecode</code> (Detailed dump of DMI configuration data including memory slots, firmware, and more)</li>
-</ul>
-<p>A Linux USB will also be helpful in the event you need to collect information about your devices, for example it would be used to collect detailed information about your audio codec for troubleshooting purposes.</p>
-<h2 id="incompatible-hardware">Incompatible Hardware</h2>
-<p>There are a lot of devices that are difficult or impossible to make work with macOS. These devices simply aren&apos;t supported, or may be partially supported but you could have serious issues.</p>
-<h3 id="amd-cpus">AMD CPUs</h3>
-<p>AMD CPUs and their associated iGPUs are unsupported in macOS. While it&apos;s possible to work around these issues with CPU patches and adding a dGPU on a desktop, you cannot add a dGPU to a laptop. AMD systems with dGPUs often use software mux switches which are also incompatible with macOS.</p>
-<h3 id="intel-cpus">Intel CPUs</h3>
-<p>macOS Mojave doesn&apos;t support any Intel processors earlier than generation 3 core CPUs due to a lack of Metal support in the integrated GPU. It is possible to get these processors working with various patches and hacks but you are better off staying with earlier versions of macOS instead.</p>
-<p>You can also add to this list:</p>
-<ul>
-<li>Pentiums</li>
-<li>Celerons</li>
-<li>Atoms</li>
-</ul>
-<h3 id="wifi-cards">WIFI cards</h3>
-<p>Do you have an Intel, Atheros, Realtek, or Broadcom device that isn&apos;t a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A _**_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.</p>
-<p>If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.</p>
-<p>Before purchasing make sure your Laptop doesn&apos;t have a whitelist that prevents the card from working. Yes, that&apos;s actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years.</p>
-<h3 id="gpus">GPUs</h3>
-<p>Does your laptop have an AMD or Nvidia GPU? You&apos;ll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple&apos;s use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. But that is still experimental and very unstable for some devices.</p>
-<h3 id="built-in-sdcard-readers">Built in SDCard Readers</h3>
-<p>If you have an SDCard reader that&apos;s connected through an internal USB hub, it&apos;s probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you&apos;re probably going to want to fake the ID so it appears as a native reader to the operating system. See! We&apos;re not even to the next page yet, and it&apos;s already important to know your hardware!</p>
-<h3 id="fingerprint-readers">Fingerprint Readers</h3>
-<p>Apple only supports their implementation of fingerprint readers through Touch ID. You may as well turn it off in your BIOS and save a little bit of power. While you&apos;re in there, turn off that USB SDCard reader as well!</p>
-<h3 id="smartcard-readers">SmartCard Readers</h3>
-<p>While some can be supported somehow, they&apos;re mostly not, and thankfully they&apos;re USB connected and can be disabled by either the BIOS/UEFI firmware Setup screen (if possible) or by remapping your USB ports and disabling it. It can potentially save some juice.</p>
+                                <h1 id="enabling-wifi--bluetooth">Enabling WIFI &amp; Bluetooth</h1>
+<p>I get it, you want your Hackintosh to be able to access the internet and connect to your Bluetooth headphones. That&apos;s a noble goal, so let&apos;s get to work! Enabling WIFI &amp; Bluetooth is pretty straight forward, but if you haven&apos;t swapped the card out for one of the supported devices that we talked about in the Know Your Hardware section, you&apos;re in for a bad time. Stop now and do that first. Remember, there are only a few compatible devices, and you really don&apos;t want to try to force the use of an unsupported device because it&apos;s cheaper, you&apos;ll just be throwing your money away. Before purchasing make sure the adapter matches the socket you&apos;ll be installing it into.</p>
+<h2 id="supported-wifibluetooth-combo-cards">Supported WIFI/Bluetooth Combo Cards</h2>
+<h3 id="mini-pcie-adapters"><strong>Mini PCIe Adapters</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Chipset</th>
+<th style="text-align:left">Antenna</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><table>
+  <thead>
+    <tr>
+      <th style="text-align:left">BCM94352HMB</th>
+      <th style="text-align:left">U.FL</th>
+      <th style="text-align:left">
+        <p><a href="https://web.archive.org/web/20191003003404/https://wikidevi.com/wiki/AzureWave_AW-CE123H" target="_blank">AzureWave AW-CE123H</a>
+        </p>
+        <p><a href="https://web.archive.org/web/20191003014022/https://wikidevi.com/wiki/Dell_Wireless_1550_(DW1550)" target="_blank">Dell DW1550</a>
+        </p>
+        <p><a href="https://web.archive.org/web/20191002211005/https://wikidevi.com/wiki/HP_TPC-Q013" target="_blank">HP TPC-Q013</a>
+        </p>
+        <p><a href="https://web.archive.org/web/20191003063651/https://wikidevi.com/wiki/Lite-On_WCBN606BH_(Lenovo)" target="_blank">Lenovo WCBN606BH</a>
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>| BCM94360HMB | MHF4 | <a href="https://web.archive.org/web/20191020204026/https://wikidevi.com/wiki/AzureWave_AW-CB160H" target="_blank">AzureWave AW-CB160H</a> |
+| :--- | :--- | :--- |</p>
+<h3 id="pcie-m2-adapters">PCIe m.2 Adapters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Chipset</th>
+<th style="text-align:left">Antenna</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><table>
+  <thead>
+    <tr>
+      <th style="text-align:left">BCM94352Z</th>
+      <th style="text-align:left">MHF4</th>
+      <th style="text-align:left">
+        <p><a href="https://web.archive.org/web/20191003014024/https://wikidevi.com/wiki/Dell_Wireless_1560_(DW1560)" target="_blank">Dell DW1560</a> (A/E
+          key)</p>
+        <p><a href="https://web.archive.org/web/20191003030111/https://wikidevi.com/wiki/Broadcom_BCM94352Z" target="_blank">Lenovo 04X6020</a> (E
+          key)</p>
+        <p>Fenvi AC1200 (A/E key)</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>| BCM943602BAED | MHF4 | <a href="https://web.archive.org/web/20191020204443/https://wikidevi.com/wiki/Dell_Wireless_1830_%28DW1830%29" target="_blank">Dell DW1830</a> (A/E key) |
+| :--- | :--- | :--- |
+| BCM94360NG | MHF4 | Fenvi BCM94360NG (A/E key) |</p>
+<h3 id="apple-native-wifi-cards">Apple Native WIFI Cards</h3>
+<p>Wireless cards manufactured by Apple are natively supported, however they use a proprietary 12+6 connector which requires an adapter to function in an mPCIe or m.2 socket. Before purchasing ensure your laptop has sufficient space for the card + adapter, and make sure to purchase the appropriate 12+6 to mPCIE or m.2 adapter.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Chipset</th>
+<th style="text-align:left">Antenna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://web.archive.org/web/20191003030122/https://wikidevi.com/wiki/Broadcom_BCM94360CS2" target="_blank">BCM94360CS2</a></td>
+<td style="text-align:left">MHF4</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://web.archive.org/web/20191002215550/https://wikidevi.com/wiki/Broadcom_BCM943224PCIEBT2" target="_blank">BCM943224PCIEBT2</a></td>
+<td style="text-align:left">MHF4</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://web.archive.org/web/20191020204211/https://wikidevi.com/wiki/Broadcom_BCM94360CD" target="_blank">BCM94360CD</a></td>
+<td style="text-align:left">M.FL</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Be sure to use an adapter that is suited for your WLAN socket and only install to the WLAN socket. Other m.2 sockets may not have all of the paths needed for WIFI and Bluetooth to function. WWAN sockets may be USB or not available without modded BIOS.</em></p>
+<h2 id="configuring-wifi">Configuring WIFI</h2>
+<p>WIFI configuration is pretty straightforward, you only need an injector kext to help macOS see and configure the card. For that we&apos;ll need to download the AirportBrcmFixup kext from its project page at Github. Add the kext to C/k/O and reboot when convenient.</p>
+<p><a href="https://github.com/acidanthera/AirportBrcmFixup" target="_blank">Download AirportBrcmFixup @ Github</a></p>
+<p>The location of the kext should match the tree below.</p>
+<pre><code class="lang-text">EFI
+&#x2514;&#x2500;&#x2500; CLOVER
+    &#x2514;&#x2500;&#x2500; kexts
+        &#x2514;&#x2500;&#x2500; Other
+            &#x2514;&#x2500;&#x2500; AirportBrcmFixup.kext
+</code></pre>
+<h2 id="setting-up-bluetooth">Setting up Bluetooth</h2>
+<p>Internal Bluetooth devices are almost as easy, but they do require being configured as internal USB devices. If you haven&apos;t mapped your USB ports yet, do that first. Unless you&apos;re using a native Apple card you will need to download BrcmPatchRam from the Acidanthera repo. Within this package you will find several kexts. These kexts are detailed in the table below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Kext</th>
+<th style="text-align:left">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">BrcmBluetoothInjector.kext</td>
+<td style="text-align:left">Use when firmware loading is not required.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmPatchRAM.kext</td>
+<td style="text-align:left">Loads firmware into the bluetooth device and activates it.  For macOS 10.10 or earlier.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmPatchRAM2.kext</td>
+<td style="text-align:left">Loads firmware into the bluetooth device and activates it.  For macOS 10.10-10.14.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmPatchRAM3.kext</td>
+<td style="text-align:left">Loads firmware into the bluetooth device and activates it.  For macOS 10.15.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmFirmwareData.kext</td>
+<td style="text-align:left">Provides firmware to BrcmPatchRAM2.</td>
+</tr>
+</tbody>
+</table>
+<p>Once you&apos;ve determined the kexts that you&apos;ll need, add them to C/k/O and reboot. If you&apos;re unsure, start with BrcmBluetoothInjector.kext. If your Bluetooth device isn&apos;t working after a reboot, you need a firmwareloader. Add the appropriate BrcmPatchRAM?.kext along with BrcmFirmwareData.kext. Leave BrcmBluetoothInjector.kext as well as it is also required.</p>
+<p><a href="https://github.com/acidanthera/BrcmPatchRAM" target="_blank">Download BrcmPatchRam @ Github</a></p>
+<p>When finished, the kexts should be located in your EFI as indicated in the tree below.</p>
+<pre><code class="lang-text">EFI
+&#x2514;&#x2500;&#x2500; CLOVER
+    &#x2514;&#x2500;&#x2500; kexts
+        &#x2514;&#x2500;&#x2500; Other
+            &#x251C;&#x2500;&#x2500; BrcmBluetoothInjector.kext
+            &#x251C;&#x2500;&#x2500; BrcmPatchRAM{2,3}.kext
+            &#x2514;&#x2500;&#x2500; BrcmFirmwareData.kext
+</code></pre>
+<p>If you need additional help with installing and configuring WIFI and Bluetooth, you should read Toleda&apos;s Broadcom WiFi/Bluetooth guide which is linked below.</p>
+<p><a href="https://www.tonymacx86.com/threads/broadcom-wifi-bluetooth-guide.242423/" target="_blank">Broadcom WiFi/Bluetooth [Guide]</a></p>
+<p>That wasn&apos;t so bad, right?</p>
 
                                 
                                 </section>
@@ -655,12 +767,12 @@
 
             
                 
-                <a href="../a-guide-to-build-guides.html" class="navigation navigation-prev " aria-label="Previous page: A Guide to Build Guides">
+                <a href="configuring-usb-ports.html" class="navigation navigation-prev " aria-label="Previous page: Configuring USB Ports">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="bios-configuration.html" class="navigation navigation-next " aria-label="Next page: BIOS Configuration">
+                <a href="setting-up-ethernet-adapters.html" class="navigation navigation-next " aria-label="Next page: Setting up Ethernet Adapters">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -671,7 +783,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Know Your Hardware","level":"2.1","depth":1,"next":{"title":"BIOS Configuration","level":"2.2","depth":1,"path":"before-you-start/bios-configuration.md","ref":"before-you-start/bios-configuration.md","articles":[]},"previous":{"title":"A Guide to Build Guides","level":"1.2","depth":1,"path":"a-guide-to-build-guides.md","ref":"a-guide-to-build-guides.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"before-you-start/know-your-hardware.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Enabling WIFI & Bluetooth","level":"5.3","depth":1,"next":{"title":"Setting up Ethernet Adapters","level":"5.4","depth":1,"path":"post-installation/setting-up-ethernet-adapters.md","ref":"post-installation/setting-up-ethernet-adapters.md","articles":[]},"previous":{"title":"Configuring USB Ports","level":"5.2","depth":1,"path":"post-installation/configuring-usb-ports.md","ref":"post-installation/configuring-usb-ports.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"post-installation/enabling-wifi-and-bluetooth.md","mtime":"2020-03-13T17:22:21.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T17:23:17.502Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
