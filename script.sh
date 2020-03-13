@@ -5,8 +5,8 @@ echo "Downloading files"
 git clone https://github.com/dhinakg/gitbook-migration.git
 
 echo "Moving files"
-mv gitbook_files/!(README.md|.travis.yml) .
-rm -r gitbook_files.zip gitbook_files
+mv gitbook-migration/!(README.md|.git) .
+rm -rf gitbook-migration
 
 echo "Installing dependencies"
 npm install -g gitbook-cli
