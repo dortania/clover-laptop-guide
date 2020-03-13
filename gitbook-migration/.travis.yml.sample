@@ -1,0 +1,22 @@
+language: node_js
+node_js: node
+before_script:
+- npm install -g gitbook-cli
+script: 
+- wget https://raw.githubusercontent.com/dhinakg/gitbook-migration/master/script.sh
+- chmod +x script.sh
+- ./script.sh
+deploy:
+  local_dir: _book
+  provider: pages
+  skip_cleanup: true
+  name: Travis Build Bot
+  fqdn:
+  keep_history: true
+  on:
+    branch: master
+  target_branch: gh-pages
+  # committer_from_gh: true
+  # allow_empty_commit: true
+  github_token:
+    secure: <INSERT TOKEN HERE>
