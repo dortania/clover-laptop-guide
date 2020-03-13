@@ -1,0 +1,17 @@
+language: node_js
+node_js: node
+script:
+- wget https://raw.githubusercontent.com/dhinakg/gitbook-migration/master/script.sh
+- chmod +x script.sh
+- "./script.sh"
+deploy:
+  local_dir: _book
+  provider: pages
+  skip_cleanup: true
+  name: Travis Build Bot
+  keep_history: true
+  on:
+    branch: master
+  target_branch: gh-pages
+  github_token:
+    secure: syjqd/OJjSaAwhtA69cLzdI6Uo7Kz27FE2Y5X2CT1S1D0dImNO1dAO+81AxESRKaqce9rqHP1ceMqrr+UWKcy7dlKVpv33XZDaMOF8oG5vTrbEkPYxTpcJV1riGMWtzzSGN/jQ+TO0S44jriroKZymzq946Tzt1QD/eusa+nWDoSrXiVpVWz6KUreOQ3HWHH7HIw3RP+BCGqWsV4pDWO8ceNpbSnGHLq+P8ZgRZ4J7DSk0QaaYhH4uveizfWoNYa1eU4cEW4ftWTwEnLs+5/tnv1bdyYRkZ8kq1U6sYSG8wi6iwG8iZ+4Z8Vos6mEJg9ANxKmHMu546HsDFF0qwgHMshWt0xE+BNdUh5fd8EF8ewmCpkbqWs/54blHOXQny3uSORFAXHKtMdlMFMcNDEYEyZC0uujfkotoj/T8XnaCAFZEuVndOpk1TvSyiVFZAmq1bWvQ5hkEdBWYEZuTyh/mFoqQz14tIrtq2rYTza55dl9naDeUfrkzgwJuBNSEVeM7ejoOK7Ag/0LMmipILWr5aFwDp6Gieu+8PRE6u60OgRK+OICEk553x+3dGBMEQ3QsrGTnBFkefGF+2/P155NMN3V1rl8rzrn9zbciFNRM0tx7aY4WB8m+C7ufyb+bwaeIGAuWm09/ExwWy19iiYltQz9uaiRUsa42/OzsjlMcg=
