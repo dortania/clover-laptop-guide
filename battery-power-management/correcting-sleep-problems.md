@@ -8,7 +8,7 @@ That's right..if you're using USBInjectAll in its default configuration, or you 
 
 ## Disabling Hibernation
 
-Hibernation isn't well supported on hackintoshes, and in some cases it doesn't work at all. We can mitigate this problem by configuring macOS to use standby mode which will preserve what's in memory on sleep but will not write it out to disk and power off the machine.
+Hibernation isn't well supported on hackintoshes, and in some cases it doesn't work at all. We can mitigate this problem by configuring macOS to use standby mode which will preserve what's in memory on sleep but will not write it out to disk and power off the machine. This may help to lenghten your SSD's lifespan but at the cost of losing all your work if the laptop was in sleep mode and power ran out or when the power is so low macOS will just shutdown and not enter hibernation mode.
 
 ```text
 sudo pmset hibernatemode 0
