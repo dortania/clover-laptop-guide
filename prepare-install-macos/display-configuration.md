@@ -159,7 +159,7 @@ Now you are ready to configure your patches. Use the table below to select the p
   | `framebuffer-stolenmem` | Data | `00003001` |
   | `framebuffer-fbmem` | Data | `00009000` |
 
-### Intel Skylake 
+### Intel Skylake (10.11.4+)
 
 | iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -201,7 +201,7 @@ Now you are ready to configure your patches. Use the table below to select the p
   | `framebuffer-fbmem` | Data | `00009000` |
 
 
-### Intel Kaby Lake, KBL-R, & Amber Lake
+### Intel Kaby Lake, KBL-R (10.12.6+), & Amber Lake (10.13.6+)
 
 | iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -252,7 +252,7 @@ Now you are ready to configure your patches. Use the table below to select the p
   | `framebuffer-stolenmem` | Data | `00003001` |
   | `framebuffer-fbmem` | Data | `00009000` |
 
-### Intel Coffee Lake, Comet Lake (14nm++++++)
+### Intel Coffee Lake, Comet Lake (14nm++++++) (10.13.6+)
 
 | iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -275,7 +275,7 @@ Now you are ready to configure your patches. Use the table below to select the p
   * `device-id`=`9B3E0000`
   * `AAPL,ig-platform-id`=`00009B3E`
 
-### Intel IceLake (*soon™*)
+### Intel IceLake (*soon™*) (10.15.4+)
 
 *to be filled*
 
