@@ -1,6 +1,13 @@
 # Installing the Operating System
 
-Now that you have your installation media created, boot your USB stick and select the macOS installer. Provided everything goes as planned, you should be presented with a tools window that looks similar to the image below.
+Now that you have your installation media created, boot your USB stick and select the macOS installer. 
+
+*Wait... what? (I'm new to Hackintosh, so please bear with me.) I was following things up to this point. 
+"All I need to do" is create a special USB drive with a FAT partition for EFI files etc and another partition with the macOS installer, then twiddle a bunch of Boot Options. So far, so good.*
+
+*Then I install the USB drive, boot the computer, and ... what happens? A description like, "Clover does some magic and gives you a choice of running the macOS installer..." or "... boot your USB stick. When given an opportunity, select the macOS installer." (whatever's true) and perhaps a screenshot would help.*
+
+Provided everything goes as planned, you should be presented with a tools window that looks similar to the image below.
 
 ![](../.gitbook/assets/screen-shot-2019-11-09-at-9.18.51-pm.png)
 
