@@ -89,7 +89,6 @@ Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array 
 
 Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-GPRW.aml.
 
-
 ```text
 // For solving instant wake by hooking GPRW or UPRW
 // Credit: Rehabman
