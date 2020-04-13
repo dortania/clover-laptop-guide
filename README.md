@@ -1,5 +1,7 @@
 # Getting Started
 
+**Attention all readers, please note this guide is now deprecated.  It will be shutting down on April 16th, 2020.  A new community managed organization has been established to help simplify the hackintosh process and provide a single, trusted source for hackintosh information. This new organization will be known as** [**Dortania**](https://github.com/dortania)**.**
+
 ## Hackintosh on a Laptop is Hard
 
 Are you really up for the challenge? Do you look forward to the coming weeks of studying documentation, reading source code, troubleshooting problems, and staying up all night because you've almost got your Hackintosh working just to find out that your change wasn't quite right?
