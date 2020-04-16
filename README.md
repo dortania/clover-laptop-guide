@@ -1,6 +1,6 @@
 # Getting Started
 
-**Attention all readers, please note this guide is now deprecated and will no longer be updated.  A new community managed organization called [Dortania](https://github.com/dortania) has been established to help simplify the hackintosh process and provide a single, unified, and trusted source for hackintosh guides and information.  This legacy guide will remain hosted on Github but please know that the information you will find here will become outdated quickly.  For the most recent and currently updated laptop guide, visit https://laptop.dortania.ml**
+**Attention all readers, please note this guide is now deprecated and will no longer be updated.  A new community managed organization called [Dortania](https://github.com/dortania) has been established to help simplify the hackintosh process and provide a single, unified, and trusted source for hackintosh guides and information.  This legacy guide will remain hosted on Github but please know that the information you will find here will become outdated quickly.  For the most recent and currently updated laptop guide, visit https://dortania.github.io/vanilla-laptop-guide/**
 
 ## Hackintosh on a Laptop is Hard
 
